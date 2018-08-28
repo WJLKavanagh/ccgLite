@@ -59,7 +59,7 @@ def is_rogue(card):
 
 # Take a command from the comm_list and print the guard
 def display_guard_command(action, i):
-    label = "\t[player_"+str(t)+"_turn] attack = 0 & turn_clock = " + str(t) + " & "
+    label = "\t[player_"+str(t)+"_turn] action = 0 & turn_clock = " + str(t) + " & "
     if action.split("_")[1] == "draw":              # Action is a card draw
         print label + action.split("_")[2] + " = -1 ->"
     elif action.split("_")[1] == "hero":            # Action is a hero attack
@@ -92,7 +92,7 @@ def display_guard_command(action, i):
                 print action[:2] + action[-2:] + " < " + action[:2] + action[-2:] + "_hea ->"
     else:
         print "Oh crumbs"                           # This shouldn't happen
-    print "\t\t(attack' = " + str(i) + ");"
+    print "\t\t(action' = " + str(i) + ");"
 
 
 # Main run method. Takes 2 ints for deck numbers of P1 and P2 then team to generate strat for.
@@ -101,11 +101,10 @@ def run(deck1, deck2, team):
     t = team
     print "// Player " + str(t) + ": Free strategy..."
     read_player_info(deck1, deck2)
-    print p1_deck, p2_deck
     create_action_list(deck1, deck2)
     for i in range(len(action_list)):
         if action_list[i][1] == str(team):
             display_guard_command(action_list[i], i)
     print
 
-run(1,3,1)      # TESTING PURPOSES
+run(1,3,2)      # TESTING PURPOSES

@@ -85,7 +85,7 @@ def gen_archer_comm(attacks, actor):
                 if t == 1 and j > 2:
                     print "\n\t\t\t\t\t",
                 if t == j-1:
-                    print "& (action' = 39);"
+                    print "& (action' = 39) +"              # CORRECT
     # hits all but one (1/2, 2/3 or 3/4)
         if len(attacks)-1 == j:
             for i in range(len(attacks)):
@@ -98,7 +98,7 @@ def gen_archer_comm(attacks, actor):
                             print "&",
                         if act_index == 2 and len(attacks) > 2:
                             print "\n\t\t\t\t\t",
-                print "(action' = 39);"
+                print "(action' = 39) + "                   # CORRECT
     # hits all but two (2/4 or 1/3)
         if len(attacks)-2 == j:
             if len(attacks) == 4:
@@ -110,25 +110,25 @@ def gen_archer_comm(attacks, actor):
                                     print "\t\tpow(" + acc + ",2)*pow(1-" + acc +",2)\n\t\t\t\t\t:",
                                     output_6_archer_comm = ""
                                     if a:
-                                        output_6_archer_comm += "(" + attacks[0] + "' = " + attacks[0] + " - " + dmg + ") + "
+                                        output_6_archer_comm += "(" + attacks[0] + "' = " + attacks[0] + " - " + dmg + ") & "
                                     if b:
                                         output_6_archer_comm += "(" + attacks[1] + "' = " + attacks[1] + " - " + dmg + ")"
                                         if a:
-                                            output_6_archer_comm += ";"
+                                            output_6_archer_comm += " + "
                                             print output_6_archer_comm
                                             break
                                         else:
-                                            output_6_archer_comm += " + "
+                                            output_6_archer_comm += " & "
                                     if c:
                                         output_6_archer_comm += "(" + attacks[2] + "' = " + attacks[2] + " - " + dmg + ")"
                                         if a or b:
-                                            output_6_archer_comm += ";"
+                                            output_6_archer_comm += " + "
                                             print output_6_archer_comm
                                             break
                                         else:
-                                            output_6_archer_comm += " + "
+                                            output_6_archer_comm += " & "
                                     if d:
-                                        output_6_archer_comm += "(" + attacks[3] + "' = " + attacks[3] + " - " + dmg + ");"
+                                        output_6_archer_comm += "(" + attacks[3] + "' = " + attacks[3] + " - " + dmg + ") +"
                                     print output_6_archer_comm
             else:
                 for i in range(len(attacks)):
@@ -141,7 +141,7 @@ def gen_archer_comm(attacks, actor):
                                 print "&",
                             if act_index == 2 and len(attacks) > 2:
                                 print "\n\t\t\t\t\t",
-                    print "(action' = 39);"
+                    print "(action' = 39) +"
     # hits all but 3 (i.e. hits 1 of 4)
         if len(attacks)-3 == j:
             for i in range(len(attacks)):
@@ -154,7 +154,7 @@ def gen_archer_comm(attacks, actor):
                             print "&",
                         if act_index == 2 and len(attacks) > 2:
                             print "\n\t\t\t\t\t",
-                print "(action' = 39);"
+                print "(action' = 39) +"
     # hits none
     if len(attacks) > 1:
         print "\t\tpow(1-"+acc+","+str(len(attacks))+")\t: (action' = 39);\n"
@@ -172,10 +172,10 @@ def display_action_guard_comm(action, i):
     split_action = action.split("_")
     if action[:2] != "no":  # Otherwise unused...
         if "attack" in split_action:         # if the action is a standard attack action..
-            if "hero" not in split_action[-1]:
+            if "hero" not in split_action[1]:
                 target = split_action[-1] + "_hea"
             else:
-                target = split_action[-2]
+                target = split_action[-1]
             actor = split_action[0]
             if is_guardian(actor):
                 # 4 labels, 4 comms (2x comms to ensure health is never negative & 2x comms to ensure hero never has > max_health)
@@ -187,14 +187,14 @@ def display_action_guard_comm(action, i):
                 label4 = label + " & " + target + " <= " + actor + "_dmg & " + actor[:2] + " = " + actor[:2] + "_hea ->"
                 # g-heal is possible, target_hea won't become 0
                 comm1 = "\t\t" + actor + "_acc\t\t: (" + target + "' = " + target + " - " + actor + "_dmg) & (" + actor[:2]
-                comm1 += "' = " + actor[:2] + " + 1) & (action' = 39);\n\t\t1 - " + actor + "_acc\t\t: (action = 39);"
+                comm1 += "' = " + actor[:2] + " + 1) & (action' = 39) + \n\t\t1 - " + actor + "_acc\t\t: (action'= 39);"
                 # etc..
-                comm2 = "\t\t" + actor + "_acc\t\t: (" + target + "' = " + target + " - " + actor + "_dmg) & (action' = 39);"
-                comm2 += "\n\t\t1 - " + actor + "_acc\t\t: (action = 39);"
+                comm2 = "\t\t" + actor + "_acc\t\t: (" + target + "' = " + target + " - " + actor + "_dmg) & (action' = 39) +"
+                comm2 += "\n\t\t1 - " + actor + "_acc\t\t: (action'= 39);"
                 comm3 = "\t\t" + actor + "_acc\t\t: (" + target + "' = 0) & (" + actor[:2]
-                comm3 += "' = " + actor[:2] + " + 1) & (action' = 39);\n\t\t1 - " + actor + "_acc\t\t: (action = 39);"
-                comm4 = "\t\t" + actor + "_acc\t\t: (" + target + "' = 0) & (action' = 39);"
-                comm4 += "\n\t\t1 - " + actor + "_acc\t\t: (action = 39);"
+                comm3 += "' = " + actor[:2] + " + 1) & (action' = 39) + \n\t\t1 - " + actor + "_acc\t\t: (action'= 39);"
+                comm4 = "\t\t" + actor + "_acc\t\t: (" + target + "' = 0) & (action' = 39) +"
+                comm4 += "\n\t\t1 - " + actor + "_acc\t\t: (action' = 39);"
                 print label1 + "\n" + comm1
                 print label2 + "\n" + comm2
                 print label3 + "\n" + comm3
@@ -222,7 +222,7 @@ def display_action_guard_comm(action, i):
             label1 = label + " & " + target + " >= (" + target + "_hea - " + actor + "_dmg) ->"
             comm1 = "\t\t" + actor + "_acc\t\t: (" + target + "' = " + target + "_hea) & (action' = 39);"
             # heal fully
-            label2 = label + " & " + target + " < " + target + "_hea - " + actor + "_dmg) ->"
+            label2 = label + " & " + target + " < " + target + "_hea - " + actor + "_dmg ->"
             comm2 = "\t\t" + actor + "_acc\t\t: (" + target + "' = " + target + " + " + actor + "_dmg) & (action' = 39);"
             print label1 + "\n" + comm1
             print label2 + "\n" + comm2 + "\n"
@@ -245,7 +245,7 @@ def display_action_guard_comm(action, i):
         elif split_action[1] == "draw":         # if the action is a card-draw
             card = split_action[-1]
             print label + " & " + card + " = -1 ->"
-            print "\t\t\t\t\t(" + card + "' = " + card + "_hea) & (state' = 39);\n"
+            print "\t\t\t\t\t(" + card + "' = " + card + "_hea) & (action' = 39);\n"
         else:                                   # next turn
             print label + " & turn_clock > 0 & p1 > 0 & p2 > 0 ->\n\t\t\t\t\t(turn_clock' = 3 - turn_clock) & (action' = 0);"
 
