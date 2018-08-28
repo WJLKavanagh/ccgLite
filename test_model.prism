@@ -1,0 +1,87 @@
+mdp
+
+// Player 1:
+const int p1_Hea = 8;
+const int p1_dmg = 1;
+
+	// Card 1: Knight
+const int p1c1_Hea = 3;
+const int p1c1_dmg = 2;
+const double p1c1_acc = 0.75;
+
+	// Card 2: Rogue 
+const int p1c2_Hea = 3;
+const int p1c2_dmg = 1;
+const double p1c2_acc = 0.9;
+
+	// Card 3: Priest
+const int p1c3_Hea = 2;
+const int p1c3_heal = 2;
+const double p1c3_acc = 0.7;
+
+// Player 2:
+const int p2_Hea = 8;
+const int p2_dmg = 1;
+
+	// Card 1: Knight
+const int p2c1_Hea = 3;
+const int p2c1_dmg = 2;
+const double p2c1_acc = 0.75;
+
+	// Card 2: Archer
+const int p2c2_Hea = 2;
+const int p2c2_dmg = 1;
+const double p2c2_acc = 0.8;
+
+	// Card 3: Guardian
+const int p2c3_Hea = 4;
+const int p2c3_dmg = 1;
+const double p2c3_acc = 0.8;
+
+module game
+
+	p1 : [0..p1_Hea] init p1_Hea;	// player 1 hero health
+	p2 : [0..p2_Hea] init p2_Hea;	// player 2 hero health
+	p1c1 : [-1..p1c1_Hea] init -1;	// player 1 card 1 health/status (-1 : in hand, 0 : dead)
+	p1c2 : [-1..p1c2_Hea] init -1;
+	p1c3 : [-1..p1c3_Hea] init -1;
+	p2c1 : [-1..p2c1_Hea] init -1;
+	p2c2 : [-1..p2c2_Hea] init -1;
+	p2c3 : [-1..p2c3_Hea] init -1;
+	turn_clock : [0..2] init 0;
+	attack : [0..30];
+
+	[flip_coin] turn_clock = 0 ->
+		0.5 : (turn_clock' = 1) + 0.5 : (turn_clock' = 2);
+
+// player 1 turn: Naive strategy
+	[p1_turn] turn_clock = 1 & attack = 0 & p1c1 = -1 & p1c2 = -1 & p1c3 = -1 &
+		p2c1 = -1 & p2c2 = -1 & p2c3 = -1 ->
+		0.25 : (attack' = 1) +
+		0.25 : (attack' = 2) +
+		0.25 : (attack' = 3) +
+		0.25 : (attack' = 4);
+	
+// player 2 turn: Free strategy
+	// [p2_turn] turn_clock = 2 & attack = 0 ->
+	//	p2_attack_p1
+
+// Stochastic actions
+	[p1_attack_p2] attack = 1 & p2 > 0 ->
+		1 : (p2' = p2 - p1_dmg) & (attack' = 30);
+
+	[draw_p1c1] attack = 2 ->
+		1 : (p1c1' = p1c1_Hea) & (attack' = 30);
+
+	[draw_p1c2] attack = 3 ->
+		1 : (p1c2' = p1c2_Hea) & (attack' = 30);
+
+	[draw_p1c3] attack = 4 ->
+		1 : (p1c3' = p1c3_Hea) & (attack' = 30);
+
+	[next_turn] attack = 30 & turn_clock > 0 & p1 > 0 & p2 > 0 ->
+		1 : (attack' = 0) & (turn_clock' = 3 - turn_clock);
+endmodule
+
+label "player_1_win" = (p1 > 0) & (p2 <= 0);
+label "player_2_win" = (p2 > 0) & (p1 <= 0);
