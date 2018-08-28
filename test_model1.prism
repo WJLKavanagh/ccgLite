@@ -55,97 +55,96 @@ module game
 	[flip_coin] turn_clock = 0 ->
 		0.5 : (turn_clock' = 1) + 0.5 : (turn_clock' = 2);
 // Player 1: Free strategy...
-	[player_1_turn] action = 0 & turn_clock = 1 & p1c1 = -1 ->
-		(action' = 1);
-	[player_1_turn] action = 0 & turn_clock = 1 & p1c2 = -1 ->
-		(action' = 2);
-	[player_1_turn] action = 0 & turn_clock = 1 & p1c3 = -1 ->
-		(action' = 3);
-	[player_1_turn] action = 0 & turn_clock = 1 & p2c1 < 1 & p2c2 < 1 & p2c3 < 1 ->
-		(action' = 7);
-	[player_1_turn] action = 0 & turn_clock = 1 & p2c1 > 0 ->
-		(action' = 8);
-	[player_1_turn] action = 0 & turn_clock = 1 & p2c2 > 0 ->
-		(action' = 9);
-	[player_1_turn] action = 0 & turn_clock = 1 & p2c3 > 0 ->
-		(action' = 10);
-	[player_1_turn] action = 0 & turn_clock = 1 & p1c1 > 0 & p2c1 < 1 & p2c2 < 1 & p2c3 < 1 ->
-		(action' = 15);
-	[player_1_turn] action = 0 & turn_clock = 1 & p1c1 > 0 & p2c1 > 0 ->
-		(action' = 16);
-	[player_1_turn] action = 0 & turn_clock = 1 & p1c1 > 0 & p2c2 > 0 ->
-		(action' = 17);
-	[player_1_turn] action = 0 & turn_clock = 1 & p1c1 > 0 & p2c3 > 0 ->
-		(action' = 18);
-	[player_1_turn] action = 0 & turn_clock = 1 & p1c2 > 0 ->
-		(action' = 19);
-	[player_1_turn] action = 0 & turn_clock = 1 & p1c2 > 0 & p2c1 > 0 ->
-		(action' = 20);
-	[player_1_turn] action = 0 & turn_clock = 1 & p1c2 > 0 & p2c2 > 0 ->
-		(action' = 21);
-	[player_1_turn] action = 0 & turn_clock = 1 & p1c2 > 0 & p2c3 > 0 ->
-		(action' = 22);
-	[player_1_turn] action = 0 & turn_clock = 1 & p1c3 > 0 & p1 < p1_hea ->
-		(action' = 23);
-	[player_1_turn] action = 0 & turn_clock = 1 & p1c3 > 0 & p1c1 > 0 & p1c1 < p1c1_hea ->
-		(action' = 24);
-	[player_1_turn] action = 0 & turn_clock = 1 & p1c3 > 0 & p1c2 > 0 & p1c2 < p1c2_hea ->
-		(action' = 25);
-	[player_1_turn] action = 0 & turn_clock = 1 & p1c3 > 0 & p1c3 < p1c3_hea ->
-		(action' = 26);
+	[player_1_turn] attack = 0 & turn_clock = 1 & p1c1 = -1 ->
+		(attack' = 1);
+	[player_1_turn] attack = 0 & turn_clock = 1 & p1c2 = -1 ->
+		(attack' = 2);
+	[player_1_turn] attack = 0 & turn_clock = 1 & p1c3 = -1 ->
+		(attack' = 3);
+	[player_1_turn] attack = 0 & turn_clock = 1 & p2c1 < 1 & p2c2 < 1 & p2c3 < 1 ->
+		(attack' = 7);
+	[player_1_turn] attack = 0 & turn_clock = 1 & p2c1 > 0 ->
+		(attack' = 8);
+	[player_1_turn] attack = 0 & turn_clock = 1 & p2c2 > 0 ->
+		(attack' = 9);
+	[player_1_turn] attack = 0 & turn_clock = 1 & p2c3 > 0 ->
+		(attack' = 10);
+	[player_1_turn] attack = 0 & turn_clock = 1 & p1c1 > 0 & p2c1 < 1 & p2c2 < 1 & p2c3 < 1 ->
+		(attack' = 15);
+	[player_1_turn] attack = 0 & turn_clock = 1 & p1c1 > 0 & p2c1 > 0 ->
+		(attack' = 16);
+	[player_1_turn] attack = 0 & turn_clock = 1 & p1c1 > 0 & p2c2 > 0 ->
+		(attack' = 17);
+	[player_1_turn] attack = 0 & turn_clock = 1 & p1c1 > 0 & p2c3 > 0 ->
+		(attack' = 18);
+	[player_1_turn] attack = 0 & turn_clock = 1 & p1c2 > 0 ->
+		(attack' = 19);
+	[player_1_turn] attack = 0 & turn_clock = 1 & p1c2 > 0 & p2c1 > 0 ->
+		(attack' = 20);
+	[player_1_turn] attack = 0 & turn_clock = 1 & p1c2 > 0 & p2c2 > 0 ->
+		(attack' = 21);
+	[player_1_turn] attack = 0 & turn_clock = 1 & p1c2 > 0 & p2c3 > 0 ->
+		(attack' = 22);
+	[player_1_turn] attack = 0 & turn_clock = 1 & p1c3 > 0 & p1 < p1_hea ->
+		(attack' = 23);
+	[player_1_turn] attack = 0 & turn_clock = 1 & p1c3 > 0 & p1c1 > 0 & p1c1 < p1c1_hea ->
+		(attack' = 24);
+	[player_1_turn] attack = 0 & turn_clock = 1 & p1c3 > 0 & p1c2 > 0 & p1c2 < p1c2_hea ->
+		(attack' = 25);
+	[player_1_turn] attack = 0 & turn_clock = 1 & p1c3 > 0 & p1c3 < p1c3_hea ->
+		(attack' = 26);
 
 // Player 2: Free strategy...
-	[player_2_turn] action = 0 & turn_clock = 2 & p2c1 = -1 ->
-		(action' = 4);
-	[player_2_turn] action = 0 & turn_clock = 2 & p2c2 = -1 ->
-		(action' = 5);
-	[player_2_turn] action = 0 & turn_clock = 2 & p2c3 = -1 ->
-		(action' = 6);
-	[player_2_turn] action = 0 & turn_clock = 2 & p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		(action' = 11);
-	[player_2_turn] action = 0 & turn_clock = 2 & p1c1 > 0 ->
-		(action' = 12);
-	[player_2_turn] action = 0 & turn_clock = 2 & p1c2 > 0 ->
-		(action' = 13);
-	[player_2_turn] action = 0 & turn_clock = 2 & p1c3 > 0 ->
-		(action' = 14);
-	[player_2_turn] action = 0 & turn_clock = 2 & p2c1 > 0 & p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		(action' = 27);
-	[player_2_turn] action = 0 & turn_clock = 2 & p2c1 > 0 & p1c1 > 0 ->
-		(action' = 28);
-	[player_2_turn] action = 0 & turn_clock = 2 & p2c1 > 0 & p1c2 > 0 ->
-		(action' = 29);
-	[player_2_turn] action = 0 & turn_clock = 2 & p2c1 > 0 & p1c3 > 0 ->
-		(action' = 30);
-	[player_2_turn] action = 0 & turn_clock = 2 & p2c2 > 0 ->
-		(action' = 31);
-	[player_2_turn] action = 0 & turn_clock = 2 & p2c2 > 0 & p1c1 > 0 ->
-		(action' = 32);
-	[player_2_turn] action = 0 & turn_clock = 2 & p2c2 > 0 & p1c2 > 0 ->
-		(action' = 33);
-	[player_2_turn] action = 0 & turn_clock = 2 & p2c2 > 0 & p1c3 > 0 ->
-		(action' = 34);
-	[player_2_turn] action = 0 & turn_clock = 2 & p2c3 > 0 ->
-		(action' = 35);
-		
+	[player_2_turn] attack = 0 & turn_clock = 2 & p2c1 = -1 ->
+		(attack' = 4);
+	[player_2_turn] attack = 0 & turn_clock = 2 & p2c2 = -1 ->
+		(attack' = 5);
+	[player_2_turn] attack = 0 & turn_clock = 2 & p2c3 = -1 ->
+		(attack' = 6);
+	[player_2_turn] attack = 0 & turn_clock = 2 & p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
+		(attack' = 11);
+	[player_2_turn] attack = 0 & turn_clock = 2 & p1c1 > 0 ->
+		(attack' = 12);
+	[player_2_turn] attack = 0 & turn_clock = 2 & p1c2 > 0 ->
+		(attack' = 13);
+	[player_2_turn] attack = 0 & turn_clock = 2 & p1c3 > 0 ->
+		(attack' = 14);
+	[player_2_turn] attack = 0 & turn_clock = 2 & p2c1 > 0 & p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
+		(attack' = 27);
+	[player_2_turn] attack = 0 & turn_clock = 2 & p2c1 > 0 & p1c1 > 0 ->
+		(attack' = 28);
+	[player_2_turn] attack = 0 & turn_clock = 2 & p2c1 > 0 & p1c2 > 0 ->
+		(attack' = 29);
+	[player_2_turn] attack = 0 & turn_clock = 2 & p2c1 > 0 & p1c3 > 0 ->
+		(attack' = 30);
+	[player_2_turn] attack = 0 & turn_clock = 2 & p2c2 > 0 ->
+		(attack' = 31);
+	[player_2_turn] attack = 0 & turn_clock = 2 & p2c2 > 0 & p1c1 > 0 ->
+		(attack' = 32);
+	[player_2_turn] attack = 0 & turn_clock = 2 & p2c2 > 0 & p1c2 > 0 ->
+		(attack' = 33);
+	[player_2_turn] attack = 0 & turn_clock = 2 & p2c2 > 0 & p1c3 > 0 ->
+		(attack' = 34);
+	[player_2_turn] attack = 0 & turn_clock = 2 & p2c3 > 0 ->
+		(attack' = 35);
 // Actions
 	[p1_draw_p1c1]		action = 1 & p1c1 = -1 ->
-					(p1c1' = p1c1_hea) & (action' = 39);
+					(p1c1' = p1c1_hea) & (state' = 39);
 
 	[p1_draw_p1c2]		action = 2 & p1c2 = -1 ->
-					(p1c2' = p1c2_hea) & (action' = 39);
+					(p1c2' = p1c2_hea) & (state' = 39);
 
 	[p1_draw_p1c3]		action = 3 & p1c3 = -1 ->
-					(p1c3' = p1c3_hea) & (action' = 39);
+					(p1c3' = p1c3_hea) & (state' = 39);
 
 	[p2_draw_p2c1]		action = 4 & p2c1 = -1 ->
-					(p2c1' = p2c1_hea) & (action' = 39);
+					(p2c1' = p2c1_hea) & (state' = 39);
 
 	[p2_draw_p2c2]		action = 5 & p2c2 = -1 ->
-					(p2c2' = p2c2_hea) & (action' = 39);
+					(p2c2' = p2c2_hea) & (state' = 39);
 
 	[p2_draw_p2c3]		action = 6 & p2c3 = -1 ->
-					(p2c3' = p2c3_hea) & (action' = 39);
+					(p2c3' = p2c3_hea) & (state' = 39);
 
 	[p1_hero_attack_p2]	action = 7 & p2_hea > p1_dmg ->
 		p1_acc 			: (p2_hea' = p2_hea - p1_dmg) & (action' = 39) +
@@ -308,79 +307,79 @@ module game
 		1 - p2c1_acc 		: (action' = 39);
 
 	[p2c2_attack_p1_hero]	action = 31 & p1 > p2c2_dmg & p2 < p2_hea ->
-		p2c2_acc		: (p1' = p1 - p2c2_dmg) & (p2' = p2 + 1) & (action' = 39) +
+		p2c2_acc		: (p1' = p1 - p2c2_dmg) & (p2' = p2 + 1) & (action' = 39) + 
 		1 - p2c2_acc		: (action'= 39);
 	[p2c2_attack_p1_hero]	action = 31 & p1 > p2c2_dmg & p2 = p2_hea ->
 		p2c2_acc		: (p1' = p1 - p2c2_dmg) & (action' = 39) +
 		1 - p2c2_acc		: (action'= 39);
 	[p2c2_attack_p1_hero]	action = 31 & p1 <= p2c2_dmg & p2 < p2_hea ->
-		p2c2_acc		: (p1' = 0) & (p2' = p2 + 1) & (action' = 39) +
+		p2c2_acc		: (p1' = 0) & (p2' = p2 + 1) & (action' = 39) + 
 		1 - p2c2_acc		: (action'= 39);
 	[p2c2_attack_p1_hero]	action = 31 & p1 <= p2c2_dmg & p2 = p2_hea ->
 		p2c2_acc		: (p1' = 0) & (action' = 39) +
 		1 - p2c2_acc		: (action' = 39);
 
 	[p2c2_attack_p1c1]	action = 32 & p1c1_hea > p2c2_dmg & p2 < p2_hea ->
-		p2c2_acc		: (p1c1_hea' = p1c1_hea - p2c2_dmg) & (p2' = p2 + 1) & (action' = 39) +
+		p2c2_acc		: (p1c1_hea' = p1c1_hea - p2c2_dmg) & (p2' = p2 + 1) & (action' = 39) + 
 		1 - p2c2_acc		: (action'= 39);
 	[p2c2_attack_p1c1]	action = 32 & p1c1_hea > p2c2_dmg & p2 = p2_hea ->
 		p2c2_acc		: (p1c1_hea' = p1c1_hea - p2c2_dmg) & (action' = 39) +
 		1 - p2c2_acc		: (action'= 39);
 	[p2c2_attack_p1c1]	action = 32 & p1c1_hea <= p2c2_dmg & p2 < p2_hea ->
-		p2c2_acc		: (p1c1_hea' = 0) & (p2' = p2 + 1) & (action' = 39) +
+		p2c2_acc		: (p1c1_hea' = 0) & (p2' = p2 + 1) & (action' = 39) + 
 		1 - p2c2_acc		: (action'= 39);
 	[p2c2_attack_p1c1]	action = 32 & p1c1_hea <= p2c2_dmg & p2 = p2_hea ->
 		p2c2_acc		: (p1c1_hea' = 0) & (action' = 39) +
 		1 - p2c2_acc		: (action' = 39);
 
 	[p2c2_attack_p1c2]	action = 33 & p1c2_hea > p2c2_dmg & p2 < p2_hea ->
-		p2c2_acc		: (p1c2_hea' = p1c2_hea - p2c2_dmg) & (p2' = p2 + 1) & (action' = 39) +
+		p2c2_acc		: (p1c2_hea' = p1c2_hea - p2c2_dmg) & (p2' = p2 + 1) & (action' = 39) + 
 		1 - p2c2_acc		: (action'= 39);
 	[p2c2_attack_p1c2]	action = 33 & p1c2_hea > p2c2_dmg & p2 = p2_hea ->
 		p2c2_acc		: (p1c2_hea' = p1c2_hea - p2c2_dmg) & (action' = 39) +
 		1 - p2c2_acc		: (action'= 39);
 	[p2c2_attack_p1c2]	action = 33 & p1c2_hea <= p2c2_dmg & p2 < p2_hea ->
-		p2c2_acc		: (p1c2_hea' = 0) & (p2' = p2 + 1) & (action' = 39) +
+		p2c2_acc		: (p1c2_hea' = 0) & (p2' = p2 + 1) & (action' = 39) + 
 		1 - p2c2_acc		: (action'= 39);
 	[p2c2_attack_p1c2]	action = 33 & p1c2_hea <= p2c2_dmg & p2 = p2_hea ->
 		p2c2_acc		: (p1c2_hea' = 0) & (action' = 39) +
 		1 - p2c2_acc		: (action' = 39);
 
 	[p2c2_attack_p1c3]	action = 34 & p1c3_hea > p2c2_dmg & p2 < p2_hea ->
-		p2c2_acc		: (p1c3_hea' = p1c3_hea - p2c2_dmg) & (p2' = p2 + 1) & (action' = 39) +
+		p2c2_acc		: (p1c3_hea' = p1c3_hea - p2c2_dmg) & (p2' = p2 + 1) & (action' = 39) + 
 		1 - p2c2_acc		: (action'= 39);
 	[p2c2_attack_p1c3]	action = 34 & p1c3_hea > p2c2_dmg & p2 = p2_hea ->
 		p2c2_acc		: (p1c3_hea' = p1c3_hea - p2c2_dmg) & (action' = 39) +
 		1 - p2c2_acc		: (action'= 39);
 	[p2c2_attack_p1c3]	action = 34 & p1c3_hea <= p2c2_dmg & p2 < p2_hea ->
-		p2c2_acc		: (p1c3_hea' = 0) & (p2' = p2 + 1) & (action' = 39) +
+		p2c2_acc		: (p1c3_hea' = 0) & (p2' = p2 + 1) & (action' = 39) + 
 		1 - p2c2_acc		: (action'= 39);
 	[p2c2_attack_p1c3]	action = 34 & p1c3_hea <= p2c2_dmg & p2 = p2_hea ->
 		p2c2_acc		: (p1c3_hea' = 0) & (action' = 39) +
 		1 - p2c2_acc		: (action' = 39);
 
 	[p2c3_attacks_all]	action = 35 & p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		pow(p2c3_acc,4)		: (p1' = p1 - p2c3_dmg) & (p1c1' = p1c1 - p2c3_dmg) &
+		pow(p2c3_acc,4)		: (p1' = p1 - p2c3_dmg) & (p1c1' = p1c1 - p2c3_dmg) & 
 					(p1c2' = p1c2 - p2c3_dmg) & (p1c3' = p1c3 - p2c3_dmg) & (action' = 39) +
 		pow(p2c3_acc,3)*pow(1-p2c3_acc,1)
-					: (p1c1' = p1c1 - p2c3_dmg) & (p1c2' = p1c2 - p2c3_dmg) &
-					(p1c3' = p1c3 - p2c3_dmg) & (action' = 39) +
+					: (p1c1' = p1c1 - p2c3_dmg) & (p1c2' = p1c2 - p2c3_dmg) & 
+					(p1c3' = p1c3 - p2c3_dmg) & (action' = 39) + 
 		pow(p2c3_acc,3)*pow(1-p2c3_acc,1)
-					: (p1' = p1 - p2c3_dmg) & (p1c2' = p1c2 - p2c3_dmg) &
-					(p1c3' = p1c3 - p2c3_dmg) & (action' = 39) +
+					: (p1' = p1 - p2c3_dmg) & (p1c2' = p1c2 - p2c3_dmg) & 
+					(p1c3' = p1c3 - p2c3_dmg) & (action' = 39) + 
 		pow(p2c3_acc,3)*pow(1-p2c3_acc,1)
-					: (p1' = p1 - p2c3_dmg) & (p1c1' = p1c1 - p2c3_dmg) & (p1c3' = p1c3 - p2c3_dmg) & (action' = 39) +
+					: (p1' = p1 - p2c3_dmg) & (p1c1' = p1c1 - p2c3_dmg) & (p1c3' = p1c3 - p2c3_dmg) & (action' = 39) + 
 		pow(p2c3_acc,3)*pow(1-p2c3_acc,1)
-					: (p1' = p1 - p2c3_dmg) & (p1c1' = p1c1 - p2c3_dmg) & (p1c2' = p1c2 - p2c3_dmg) &
-					(action' = 39) +
+					: (p1' = p1 - p2c3_dmg) & (p1c1' = p1c1 - p2c3_dmg) & (p1c2' = p1c2 - p2c3_dmg) & 
+					(action' = 39) + 
 		pow(p2c3_acc,2)*pow(1-p2c3_acc,2)
-					: (p1' = p1 - p2c3_dmg) & (p1c1' = p1c1 - p2c3_dmg) +
+					: (p1' = p1 - p2c3_dmg) & (p1c1' = p1c1 - p2c3_dmg) + 
 		pow(p2c3_acc,2)*pow(1-p2c3_acc,2)
-					: (p1' = p1 - p2c3_dmg) & (p1c2' = p1c2 - p2c3_dmg) +
+					: (p1' = p1 - p2c3_dmg) & (p1c2' = p1c2 - p2c3_dmg) + 
 		pow(p2c3_acc,2)*pow(1-p2c3_acc,2)
 					: (p1' = p1 - p2c3_dmg) & (p1c3' = p1c3 - p2c3_dmg) +
 		pow(p2c3_acc,2)*pow(1-p2c3_acc,2)
-					: (p1c1' = p1c1 - p2c3_dmg) & (p1c2' = p1c2 - p2c3_dmg) +
+					: (p1c1' = p1c1 - p2c3_dmg) & (p1c2' = p1c2 - p2c3_dmg) + 
 		pow(p2c3_acc,2)*pow(1-p2c3_acc,2)
 					: (p1c1' = p1c1 - p2c3_dmg) & (p1c3' = p1c3 - p2c3_dmg) +
 		pow(p2c3_acc,2)*pow(1-p2c3_acc,2)
@@ -390,94 +389,94 @@ module game
 		p2c3_acc*pow(1-p2c3_acc,3)
 					: (p1c1' = p1c1 - p2c3_dmg) & (action' = 39) +
 		p2c3_acc*pow(1-p2c3_acc,3)
-					: (p1c2' = p1c2 - p2c3_dmg) &
+					: (p1c2' = p1c2 - p2c3_dmg) & 
 					(action' = 39) +
 		p2c3_acc*pow(1-p2c3_acc,3)
 					: (p1c3' = p1c3 - p2c3_dmg) & (action' = 39) +
 		pow(1-p2c3_acc,4)	: (action' = 39);
 
 	[p2c3_attacks_all]	action = 35 & p1c1 > 0 & p1c2 > 0 & p1c3 <= 0 ->
-		pow(p2c3_acc,3)		: (p1' = p1 - p2c3_dmg) & (p1c1' = p1c1 - p2c3_dmg) &
+		pow(p2c3_acc,3)		: (p1' = p1 - p2c3_dmg) & (p1c1' = p1c1 - p2c3_dmg) & 
 					(p1c2' = p1c2 - p2c3_dmg) & (action' = 39) +
 		pow(p2c3_acc,2)*pow(1-p2c3_acc,1)
-					: (p1c1' = p1c1 - p2c3_dmg) & (p1c2' = p1c2 - p2c3_dmg) &
-					(action' = 39) +
+					: (p1c1' = p1c1 - p2c3_dmg) & (p1c2' = p1c2 - p2c3_dmg) & 
+					(action' = 39) + 
 		pow(p2c3_acc,2)*pow(1-p2c3_acc,1)
-					: (p1' = p1 - p2c3_dmg) & (p1c2' = p1c2 - p2c3_dmg) &
-					(action' = 39) +
+					: (p1' = p1 - p2c3_dmg) & (p1c2' = p1c2 - p2c3_dmg) & 
+					(action' = 39) + 
 		pow(p2c3_acc,2)*pow(1-p2c3_acc,1)
-					: (p1' = p1 - p2c3_dmg) & (p1c1' = p1c1 - p2c3_dmg) & (action' = 39) +
+					: (p1' = p1 - p2c3_dmg) & (p1c1' = p1c1 - p2c3_dmg) & (action' = 39) + 
 		pow(p2c3_acc,1)*pow(1-p2c3_acc,2)
 					: (p1' = p1 - p2c3_dmg) & (action' = 39) +
 		pow(p2c3_acc,1)*pow(1-p2c3_acc,2)
 					: (p1c1' = p1c1 - p2c3_dmg) & (action' = 39) +
 		pow(p2c3_acc,1)*pow(1-p2c3_acc,2)
-					: (p1c2' = p1c2 - p2c3_dmg) &
+					: (p1c2' = p1c2 - p2c3_dmg) & 
 					(action' = 39) +
 		pow(1-p2c3_acc,3)	: (action' = 39);
 
 	[p2c3_attacks_all]	action = 35 & p1c1 > 0 & p1c2 <= 0 & p1c3 > 0 ->
-		pow(p2c3_acc,3)		: (p1' = p1 - p2c3_dmg) & (p1c1' = p1c1 - p2c3_dmg) &
+		pow(p2c3_acc,3)		: (p1' = p1 - p2c3_dmg) & (p1c1' = p1c1 - p2c3_dmg) & 
 					(p1c3' = p1c3 - p2c3_dmg) & (action' = 39) +
 		pow(p2c3_acc,2)*pow(1-p2c3_acc,1)
-					: (p1c1' = p1c1 - p2c3_dmg) & (p1c3' = p1c3 - p2c3_dmg) &
-					(action' = 39) +
+					: (p1c1' = p1c1 - p2c3_dmg) & (p1c3' = p1c3 - p2c3_dmg) & 
+					(action' = 39) + 
 		pow(p2c3_acc,2)*pow(1-p2c3_acc,1)
-					: (p1' = p1 - p2c3_dmg) & (p1c3' = p1c3 - p2c3_dmg) &
-					(action' = 39) +
+					: (p1' = p1 - p2c3_dmg) & (p1c3' = p1c3 - p2c3_dmg) & 
+					(action' = 39) + 
 		pow(p2c3_acc,2)*pow(1-p2c3_acc,1)
-					: (p1' = p1 - p2c3_dmg) & (p1c1' = p1c1 - p2c3_dmg) & (action' = 39) +
+					: (p1' = p1 - p2c3_dmg) & (p1c1' = p1c1 - p2c3_dmg) & (action' = 39) + 
 		pow(p2c3_acc,1)*pow(1-p2c3_acc,2)
 					: (p1' = p1 - p2c3_dmg) & (action' = 39) +
 		pow(p2c3_acc,1)*pow(1-p2c3_acc,2)
 					: (p1c1' = p1c1 - p2c3_dmg) & (action' = 39) +
 		pow(p2c3_acc,1)*pow(1-p2c3_acc,2)
-					: (p1c3' = p1c3 - p2c3_dmg) &
+					: (p1c3' = p1c3 - p2c3_dmg) & 
 					(action' = 39) +
 		pow(1-p2c3_acc,3)	: (action' = 39);
 
 	[p2c3_attacks_all]	action = 35 & p1c1 > 0 & p1c2 <= 0 & p1c3 <= 0 ->
 		pow(p2c3_acc,2)		: (p1' = p1 - p2c3_dmg) & (p1c1' = p1c1 - p2c3_dmg) & (action' = 39) +
 		pow(p2c3_acc,1)*pow(1-p2c3_acc,1)
-					: (p1c1' = p1c1 - p2c3_dmg) & (action' = 39) +
+					: (p1c1' = p1c1 - p2c3_dmg) & (action' = 39) + 
 		pow(p2c3_acc,1)*pow(1-p2c3_acc,1)
-					: (p1' = p1 - p2c3_dmg) & (action' = 39) +
+					: (p1' = p1 - p2c3_dmg) & (action' = 39) + 
 		pow(1-p2c3_acc,2)	: (action' = 39);
 
 	[p2c3_attacks_all]	action = 35 & p1c1 <= 0 & p1c2 > 0 & p1c3 > 0 ->
-		pow(p2c3_acc,3)		: (p1' = p1 - p2c3_dmg) & (p1c2' = p1c2 - p2c3_dmg) &
+		pow(p2c3_acc,3)		: (p1' = p1 - p2c3_dmg) & (p1c2' = p1c2 - p2c3_dmg) & 
 					(p1c3' = p1c3 - p2c3_dmg) & (action' = 39) +
 		pow(p2c3_acc,2)*pow(1-p2c3_acc,1)
-					: (p1c2' = p1c2 - p2c3_dmg) & (p1c3' = p1c3 - p2c3_dmg) &
-					(action' = 39) +
+					: (p1c2' = p1c2 - p2c3_dmg) & (p1c3' = p1c3 - p2c3_dmg) & 
+					(action' = 39) + 
 		pow(p2c3_acc,2)*pow(1-p2c3_acc,1)
-					: (p1' = p1 - p2c3_dmg) & (p1c3' = p1c3 - p2c3_dmg) &
-					(action' = 39) +
+					: (p1' = p1 - p2c3_dmg) & (p1c3' = p1c3 - p2c3_dmg) & 
+					(action' = 39) + 
 		pow(p2c3_acc,2)*pow(1-p2c3_acc,1)
-					: (p1' = p1 - p2c3_dmg) & (p1c2' = p1c2 - p2c3_dmg) & (action' = 39) +
+					: (p1' = p1 - p2c3_dmg) & (p1c2' = p1c2 - p2c3_dmg) & (action' = 39) + 
 		pow(p2c3_acc,1)*pow(1-p2c3_acc,2)
 					: (p1' = p1 - p2c3_dmg) & (action' = 39) +
 		pow(p2c3_acc,1)*pow(1-p2c3_acc,2)
 					: (p1c2' = p1c2 - p2c3_dmg) & (action' = 39) +
 		pow(p2c3_acc,1)*pow(1-p2c3_acc,2)
-					: (p1c3' = p1c3 - p2c3_dmg) &
+					: (p1c3' = p1c3 - p2c3_dmg) & 
 					(action' = 39) +
 		pow(1-p2c3_acc,3)	: (action' = 39);
 
 	[p2c3_attacks_all]	action = 35 & p1c1 <= 0 & p1c2 > 0 & p1c3 <= 0 ->
 		pow(p2c3_acc,2)		: (p1' = p1 - p2c3_dmg) & (p1c2' = p1c2 - p2c3_dmg) & (action' = 39) +
 		pow(p2c3_acc,1)*pow(1-p2c3_acc,1)
-					: (p1c2' = p1c2 - p2c3_dmg) & (action' = 39) +
+					: (p1c2' = p1c2 - p2c3_dmg) & (action' = 39) + 
 		pow(p2c3_acc,1)*pow(1-p2c3_acc,1)
-					: (p1' = p1 - p2c3_dmg) & (action' = 39) +
+					: (p1' = p1 - p2c3_dmg) & (action' = 39) + 
 		pow(1-p2c3_acc,2)	: (action' = 39);
 
 	[p2c3_attacks_all]	action = 35 & p1c1 <= 0 & p1c2 <= 0 & p1c3 > 0 ->
 		pow(p2c3_acc,2)		: (p1' = p1 - p2c3_dmg) & (p1c3' = p1c3 - p2c3_dmg) & (action' = 39) +
 		pow(p2c3_acc,1)*pow(1-p2c3_acc,1)
-					: (p1c3' = p1c3 - p2c3_dmg) & (action' = 39) +
+					: (p1c3' = p1c3 - p2c3_dmg) & (action' = 39) + 
 		pow(p2c3_acc,1)*pow(1-p2c3_acc,1)
-					: (p1' = p1 - p2c3_dmg) & (action' = 39) +
+					: (p1' = p1 - p2c3_dmg) & (action' = 39) + 
 		pow(1-p2c3_acc,2)	: (action' = 39);
 
 	[p2c3_attacks_all]	action = 35 & p1c1 <= 0 & p1c2 <= 0 & p1c3 <= 0 ->

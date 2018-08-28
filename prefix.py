@@ -29,23 +29,23 @@ def read_card_info(card, player, index):
         if info[i][0:2] == "!"+card.upper():
             print info[i][1:-1]                                             # finish comment & strip \n
             print "const int p"+player+"c"+index+"_hea =",                  # print health
-            print info[i+1].split("=")[1][:-1]                              # print val & strip \n
+            print info[i+1].split("=")[1][:-1]+";"                              # print val & strip \n
             print "const int p"+player+"c"+index+"_dmg =",                  # print damage
-            print info[i+2].split("=")[1][:-1]
+            print info[i+2].split("=")[1][:-1]+";"
             print "const double p"+player+"c"+index+"_acc =",                # print accuracy
-            print info[i+3].split("=")[1]
+            print info[i+3].split("=")[1]+";"
 
 # Print constant values in file header
 def display_header(deck1, deck2):
     print "\n//Player 1:"
-    print "const int p1_hea =", str(p1_health)
-    print "const int p1_dmg =", str(p1_damage)
+    print "const int p1_hea =", str(p1_health) + ";"
+    print "const int p1_dmg =", str(p1_damage) + ";"
     print
     for i in range(len(p1_deck)):
         read_card_info(p1_deck[i], 1, i)
     print "//Player 2:"
-    print "const int p2_hea =", str(p2_health)
-    print "const int p2_dmg =", str(p2_damage)
+    print "const int p2_hea =", str(p2_health) + ";"
+    print "const int p2_dmg =", str(p2_damage) + ";"
     print
     for i in range(len(p2_deck)):
         read_card_info(p2_deck[i], 2, i)
