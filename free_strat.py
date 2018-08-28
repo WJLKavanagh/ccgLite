@@ -50,16 +50,6 @@ def create_action_list(deck1, deck2):
             action_list += [card_string + "_attacks_all","not_used","not_used","not_used"]
     action_list += ["next_turn"]
 
-# Take int of opposing player (2 for p2) returns C of a guardian or 0 if none are present
-def find_guardian(opposing_team):
-    candidate_deck = [p1_deck[0], p1_deck[1], p1_deck[2]]
-    if opposing_team == 2:
-        candidate_deck = [p2_deck[0], p2_deck[1], p2_deck[2]]
-    for i in range(len(candidate_deck)):
-        if candidate_deck[i] == "G":
-            return i+1
-    return 0
-
 # Takes card_string (e.g. p2c1) and returns TRUE if card is a rogue
 def is_rogue(card):
     candidate_deck = [p1_deck[0], p1_deck[1], p1_deck[2]]
@@ -77,11 +67,7 @@ def display_guard_command(action, i):
             print label + "p" + str(3-t) + "c1 < 1",
             print "& p" + str(3-t) + "c2 < 1 & p" + str(3-t) + "c3 < 1 ->"
         else:                                               # Target is enemy card
-            print label + action.split("_")[-1] + " > 0",
-            if guard_pos > 0 and guard_pos != int(action[-1]):
-                print "& p" + str(3-t) + "c" + str(guard_pos) + " < 1 ->"
-            else:
-                print "->"
+            print label + action.split("_")[-1] + " > 0 ->"
     elif action.split("_")[1] == "attack":          # If action belongs to K/R/G
         if len(action.split("_")) > 3:                      # Target is enemy hero
             print label + action.split("_")[0] + " > 0",
@@ -91,11 +77,7 @@ def display_guard_command(action, i):
                 print "& p" + str(3-t) + "c1 < 1",
                 print "& p" + str(3-t) + "c2 < 1 & p" + str(3-t) + "c3 < 1 ->"
         else:                                               # Target is enemy card
-            print label + action.split("_")[0] + " > 0 & " + action.split("_")[-1] + " > 0",
-            if guard_pos > 0 and guard_pos != int(action[-1]):
-                print "& p" + str(3-t) + "c" + str(guard_pos) + " < 1 ->"
-            else:
-                print "->"
+            print label + action.split("_")[0] + " > 0 & " + action.split("_")[-1] + " > 0 ->"
     elif action.split("_")[1] == "attacks":         # If action belongs to A
         print label + action.split("_")[0] + " > 0 ->"
     elif action.split("_")[1] == "heal":            # action belongs to P
@@ -110,18 +92,17 @@ def display_guard_command(action, i):
                 print action[:2] + action[-2:] + " < " + action[:2] + action[-2:] + "_hea ->"
     else:
         print "Oh crumbs"                           # This shouldn't happen
-    print "\t\t(attack' = " + str(i) + ");\t\t\t\t//" + action
+    print "\t\t(attack' = " + str(i) + ");"
 
 
 # Main run method. Takes 2 ints for deck numbers of P1 and P2 then team to generate strat for.
 def run(deck1, deck2, team):
-    global t, guard_pos
+    global t
     t = team
     print "// Player " + str(t) + ": Free strategy..."
     read_player_info(deck1, deck2)
     print p1_deck, p2_deck
     create_action_list(deck1, deck2)
-    guard_pos = find_guardian(3-t)
     for i in range(len(action_list)):
         if action_list[i][1] == str(team):
             display_guard_command(action_list[i], i)
