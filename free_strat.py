@@ -41,10 +41,10 @@ def create_action_list(deck1, deck2):
             opponent = "p1"
         card_string += "c" + str(i%3 + 1)
         if cards[i] in ["G", "K", "R"]:
-            for target in ["_hero", "c1", "c2", "c3"]:
+            for target in ["", "c1", "c2", "c3"]:
                 action_list += [card_string + "_attack_" + opponent + target]
         elif cards[i] == "P":
-            for target in ["_hero", "_c1", "_c2", "_c3"]:
+            for target in ["_"+card_string[:2], "_c1", "_c2", "_c3"]:
                 action_list += [card_string + "_heal" + target]
         elif cards[i] == "A":
             action_list += [card_string + "_attacks_all","not_used","not_used","not_used"]
@@ -106,5 +106,3 @@ def run(deck1, deck2, team):
         if action_list[i][1] == str(team):
             display_guard_command(action_list[i], i)
     print
-
-run(1,3,2)      # TESTING PURPOSES

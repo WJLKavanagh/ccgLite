@@ -84,5 +84,3 @@ def run(deck1, deck2, model):
     print "\nmodule game\n"
     display_local_variables(deck1, deck2)
     print "\t[flip_coin] turn_clock = 0 ->\n\t\t0.5 : (turn_clock' = 1) + 0.5 : (turn_clock' = 2);"
-
-run(1,3,"mdp")  # TESTING PURPOSES
