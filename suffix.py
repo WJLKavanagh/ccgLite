@@ -41,10 +41,10 @@ def create_action_list(deck1, deck2):
             opponent = "p1"
         card_string += "c" + str(i%3 + 1)
         if cards[i] in ["G", "K", "R"]:
-            for target in ["_hero", "c1", "c2", "c3"]:
+            for target in ["", "c1", "c2", "c3"]:
                 action_list += [card_string + "_attack_" + opponent + target]
         elif cards[i] == "P":
-            for target in ["_hero", "_c1", "_c2", "_c3"]:
+            for target in ["_"+card_string[:2], "_c1", "_c2", "_c3"]:
                 action_list += [card_string + "_heal" + target]
         elif cards[i] == "A":
             action_list += [card_string + "_attacks_all","not_used","not_used","not_used"]
@@ -172,10 +172,11 @@ def display_action_guard_comm(action, i):
     split_action = action.split("_")
     if action[:2] != "no":  # Otherwise unused...
         if "attack" in split_action:         # if the action is a standard attack action..
-            if "hero" not in split_action[1]:
+            """if "c" in split_action[-1]:
                 target = split_action[-1] + "_hea"
             else:
-                target = split_action[-1]
+                target = split_action[-1]"""
+            target = split_action[-1]
             actor = split_action[0]
             if is_guardian(actor):
                 # 4 labels, 4 comms (2x comms to ensure health is never negative & 2x comms to ensure hero never has > max_health)
@@ -199,6 +200,9 @@ def display_action_guard_comm(action, i):
                 print label2 + "\n" + comm2
                 print label3 + "\n" + comm3
                 print label4 + "\n" + comm4 + "\n"
+            elif len(actor) <= 2:           # hero attack, no accuracy
+                print label + "& " + target + " > 0 ->"
+                print "\t\t\t\t\t(" + target + "' = " + target + " - 1) & (action' = 39);"
             else:
                 # 2 labels, 2 comms (second comm ensures health is never negative)
                 label1 = label + " & " + target + " > " + actor + "_dmg ->"
@@ -214,16 +218,18 @@ def display_action_guard_comm(action, i):
                 print label2 + "\n" + comm2 + "\n"
         elif split_action[1] == "heal":         # if the action is a heal
             actor = split_action[0]
-            if split_action[2] != "hero":
-                target = actor[:2]+split_action[2]
+            if len(split_action[2]) > 2:
+                target = actor[:2]+split_action[2]+"_hea"
             else:
                 target = actor[:2]
             # can't heal fully -> heal to max.
-            label1 = label + " & " + target + " >= (" + target + "_hea - " + actor + "_dmg) ->"
-            comm1 = "\t\t" + actor + "_acc\t\t: (" + target + "' = " + target + "_hea) & (action' = 39);"
+            label1 = label + " & " + target + " >= (" + target + " - " + actor + "_dmg) ->"
+            comm1 = "\t\t" + actor + "_acc\t\t: (" + target + "' = " + target + "_hea) & (action' = 39) +"
+            comm1 += "\n\t\t1 -" + actor + "_acc\t\t: (action' = 39);"
             # heal fully
-            label2 = label + " & " + target + " < " + target + "_hea - " + actor + "_dmg ->"
-            comm2 = "\t\t" + actor + "_acc\t\t: (" + target + "' = " + target + " + " + actor + "_dmg) & (action' = 39);"
+            label2 = label + " & " + target + " < " + target + " - " + actor + "_dmg ->"
+            comm2 = "\t\t" + actor + "_acc\t\t: (" + target + "' = " + target + " + " + actor + "_dmg) & (action' = 39)+ "
+            comm2 += "\n\t\t1 -" + actor + "_acc\t\t: (action' = 39);"
             print label1 + "\n" + comm1
             print label2 + "\n" + comm2 + "\n"
         elif split_action[1] == "attacks":      # if the action is a multi-target attack..
@@ -235,7 +241,7 @@ def display_action_guard_comm(action, i):
                         label = "\t[" + action + "]" + buff_string + "action = " + str(i)
                         on_track = [a,b,c]
                         label += " & " + opp + "c1 " + gen_archer_guard_health(a) + " & " + opp + "c2 " + gen_archer_guard_health(b)
-                        label += " & " + opp + "c3 " + gen_archer_guard_health(c)
+                        label += " & " + opp + "c3 " + gen_archer_guard_health(c) + " & " + opp + " > 0"
                         print label + " ->"
                         legal_attacks = [opp]
                         for k in range(len(on_track)):
@@ -277,5 +283,3 @@ def run(deck1, deck2, multiple_initial_states):
         if i%2 == 1:
             print
 """
-
-run(1,3,0)      # TESTING PURPOSES
