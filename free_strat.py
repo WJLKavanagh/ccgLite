@@ -63,10 +63,9 @@ def display_guard_command(action, i):
     if action.split("_")[1] == "draw":              # Action is a card draw
         print label + action.split("_")[2] + " = -1 ->"
     elif action.split("_")[1] == "hero":            # Action is a hero attack
-        if "c" not in action[-4:]:                    # Target is enemy hero
-            if status[3] + status[4] + status[5] == 0:  # If no opposing cards are on the track
-                print label + "p" + str(3-t) + "c1 < 1",
-                print "& p" + str(3-t) + "c2 < 1 & p" + str(3-t) + "c3 < 1 ->"
+        if "c" not in action[-4:]:                           # Target is enemy hero
+            print label + "p" + str(3-t) + "c1 < 1",
+            print "& p" + str(3-t) + "c2 < 1 & p" + str(3-t) + "c3 < 1 ->"
         else:                                               # Target is enemy card
             print label + action.split("_")[-1] + " > 0 ->"
     elif action.split("_")[1] == "attack":          # If action belongs to K/R/G
