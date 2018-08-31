@@ -257,6 +257,15 @@ def display_action_guard_comm(action, i):
         else:                                   # next turn
             print label + " & turn_clock > 0 & p1 > 0 & p2 > 0 ->\n\t\t\t\t\t(turn_clock' = 3 - turn_clock) & (action' = 0);"
 
+# find highest card health
+def find_max_card_health():
+    max_health = 0
+    for i in range(len(info)):
+        if info[i][:4]=="hea=":
+            if int(info[i][4]) > max_health:
+                max_health = int(info[i][4])
+    return max_health
+
 # Main run method. Takes 2 ints for deck numbers of P1 and P2 then team to generate strat for.
 def run(deck1, deck2, multiple_initial_states):
     global t, guard_pos
@@ -266,22 +275,19 @@ def run(deck1, deck2, multiple_initial_states):
     for i in range(len(action_list)):
         display_action_guard_comm(action_list[i], i)
     print "endmodule\n"
-    if multiple_initial_states:
-        ## TODO:
-        print "MULTIPLE INITIAL STATES NOT YET IMPLEMENTED"
+    if multiple_initial_states == 1 or multiple_initial_states == "1":
+        max_health = find_max_card_health()
+        print "// Multiple initial states"
+        print "init"
+        print "\taction = 0 & (turn_clock = 1 | turn_clock = 2) &"
+        print "\t(p1 > 0 & p1 <= p1_hea) & (p2 > 0 & p2 <= p2_hea) &"
+        for i in range(1,4):
+            print "\t(p1c" + str(i) + " >= -1 & p1c" + str(i) + " <= " + str(max_health) + ") &",
+            print "(p2c" + str(i) + " >= -1 & p2c" + str(i) + " <= " + str(max_health) + ")",
+            if i != 3:
+                print "&"
+        print "\nendinit\n"
     else:
         print "// Single initial state"
     print 'label "p1_win" = (p1 > 0 & p2 <= 0);'
     print 'label "p2_win" = (p2 > 0 & p1 <= 0);'
-
-""" TEST BLOCK: Print all actions and their indicies.
-    print "\n\n\n"
-    for i in range(len(action_list)):
-        print i, "\t", action_list[i], "\t",
-        if len(action_list[i]) < 8:
-            print "\t\t",
-        elif len(action_list[i]) < 16:
-            print "\t",
-        if i%2 == 1:
-            print
-"""
