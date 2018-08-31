@@ -123,7 +123,7 @@ def generate_guard_comm(status):
     #print command
     prob = "1/" + str(len(available_actions)) + ":"
     for k in range(len(available_actions)):
-        print "\t\t" + prob + "\t(status' = " + str(available_actions[k]) + ")",
+        print "\t\t" + prob + "\t(action' = " + str(available_actions[k]) + ")",
         if k < len(available_actions)-1:
             print "+"
         else: print ";"
