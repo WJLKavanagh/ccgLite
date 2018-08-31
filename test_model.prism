@@ -1,7 +1,7 @@
 mdp
 
 //Player 1:
-const int p1_hea = 8;
+const int p1_hea = 6;
 const int p1_dmg = 1;
 
 	//Card 1: KNIGHT
@@ -20,7 +20,7 @@ const int p1c3_dmg = 2;
 const double p1c3_acc = 0.7
 ;
 //Player 2:
-const int p2_hea = 8;
+const int p2_hea = 6;
 const int p2_dmg = 1;
 
 	//Card 1: KNIGHT
@@ -98,1587 +98,1587 @@ module game
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 = -1 & p2c3 = -1 & 
 			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/4:	(status' = 4) +
-		1/4:	(status' = 5) +
-		1/4:	(status' = 6) +
-		1/4:	(status' = 11) ;
+		1/4:	(action' = 4) +
+		1/4:	(action' = 5) +
+		1/4:	(action' = 6) +
+		1/4:	(action' = 11) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 = -1 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/4:	(status' = 4) +
-		1/4:	(status' = 5) +
-		1/4:	(status' = 6) +
-		1/4:	(status' = 14) ;
+			p1c1 < 1 & p1c2 < 1 & p1c3 > 0 ->
+		1/4:	(action' = 4) +
+		1/4:	(action' = 5) +
+		1/4:	(action' = 6) +
+		1/4:	(action' = 14) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 = -1 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/4:	(status' = 4) +
-		1/4:	(status' = 5) +
-		1/4:	(status' = 6) +
-		1/4:	(status' = 13) ;
+			p1c1 < 1 & p1c2 > 0 & p1c3 < 1 ->
+		1/4:	(action' = 4) +
+		1/4:	(action' = 5) +
+		1/4:	(action' = 6) +
+		1/4:	(action' = 13) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 = -1 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/5:	(status' = 4) +
-		1/5:	(status' = 5) +
-		1/5:	(status' = 6) +
-		1/5:	(status' = 13) +
-		1/5:	(status' = 14) ;
+			p1c1 < 1 & p1c2 > 0 & p1c3 > 0 ->
+		1/5:	(action' = 4) +
+		1/5:	(action' = 5) +
+		1/5:	(action' = 6) +
+		1/5:	(action' = 13) +
+		1/5:	(action' = 14) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 = -1 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/4:	(status' = 4) +
-		1/4:	(status' = 5) +
-		1/4:	(status' = 6) +
-		1/4:	(status' = 12) ;
+			p1c1 > 0 & p1c2 < 1 & p1c3 < 1 ->
+		1/4:	(action' = 4) +
+		1/4:	(action' = 5) +
+		1/4:	(action' = 6) +
+		1/4:	(action' = 12) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 = -1 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/5:	(status' = 4) +
-		1/5:	(status' = 5) +
-		1/5:	(status' = 6) +
-		1/5:	(status' = 12) +
-		1/5:	(status' = 14) ;
+			p1c1 > 0 & p1c2 < 1 & p1c3 > 0 ->
+		1/5:	(action' = 4) +
+		1/5:	(action' = 5) +
+		1/5:	(action' = 6) +
+		1/5:	(action' = 12) +
+		1/5:	(action' = 14) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 = -1 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/5:	(status' = 4) +
-		1/5:	(status' = 5) +
-		1/5:	(status' = 6) +
-		1/5:	(status' = 12) +
-		1/5:	(status' = 13) ;
+			p1c1 > 0 & p1c2 > 0 & p1c3 < 1 ->
+		1/5:	(action' = 4) +
+		1/5:	(action' = 5) +
+		1/5:	(action' = 6) +
+		1/5:	(action' = 12) +
+		1/5:	(action' = 13) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 = -1 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/6:	(status' = 4) +
-		1/6:	(status' = 5) +
-		1/6:	(status' = 6) +
-		1/6:	(status' = 12) +
-		1/6:	(status' = 13) +
-		1/6:	(status' = 14) ;
+			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
+		1/6:	(action' = 4) +
+		1/6:	(action' = 5) +
+		1/6:	(action' = 6) +
+		1/6:	(action' = 12) +
+		1/6:	(action' = 13) +
+		1/6:	(action' = 14) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 = -1 & p2c3 = 0 & 
 			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/3:	(status' = 4) +
-		1/3:	(status' = 5) +
-		1/3:	(status' = 11) ;
+		1/3:	(action' = 4) +
+		1/3:	(action' = 5) +
+		1/3:	(action' = 11) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 = -1 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/3:	(status' = 4) +
-		1/3:	(status' = 5) +
-		1/3:	(status' = 14) ;
+			p1c1 < 1 & p1c2 < 1 & p1c3 > 0 ->
+		1/3:	(action' = 4) +
+		1/3:	(action' = 5) +
+		1/3:	(action' = 14) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 = -1 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/3:	(status' = 4) +
-		1/3:	(status' = 5) +
-		1/3:	(status' = 13) ;
+			p1c1 < 1 & p1c2 > 0 & p1c3 < 1 ->
+		1/3:	(action' = 4) +
+		1/3:	(action' = 5) +
+		1/3:	(action' = 13) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 = -1 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/4:	(status' = 4) +
-		1/4:	(status' = 5) +
-		1/4:	(status' = 13) +
-		1/4:	(status' = 14) ;
+			p1c1 < 1 & p1c2 > 0 & p1c3 > 0 ->
+		1/4:	(action' = 4) +
+		1/4:	(action' = 5) +
+		1/4:	(action' = 13) +
+		1/4:	(action' = 14) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 = -1 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/3:	(status' = 4) +
-		1/3:	(status' = 5) +
-		1/3:	(status' = 12) ;
+			p1c1 > 0 & p1c2 < 1 & p1c3 < 1 ->
+		1/3:	(action' = 4) +
+		1/3:	(action' = 5) +
+		1/3:	(action' = 12) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 = -1 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/4:	(status' = 4) +
-		1/4:	(status' = 5) +
-		1/4:	(status' = 12) +
-		1/4:	(status' = 14) ;
+			p1c1 > 0 & p1c2 < 1 & p1c3 > 0 ->
+		1/4:	(action' = 4) +
+		1/4:	(action' = 5) +
+		1/4:	(action' = 12) +
+		1/4:	(action' = 14) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 = -1 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/4:	(status' = 4) +
-		1/4:	(status' = 5) +
-		1/4:	(status' = 12) +
-		1/4:	(status' = 13) ;
+			p1c1 > 0 & p1c2 > 0 & p1c3 < 1 ->
+		1/4:	(action' = 4) +
+		1/4:	(action' = 5) +
+		1/4:	(action' = 12) +
+		1/4:	(action' = 13) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 = -1 & p2c3 = 0 & 
+			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
+		1/5:	(action' = 4) +
+		1/5:	(action' = 5) +
+		1/5:	(action' = 12) +
+		1/5:	(action' = 13) +
+		1/5:	(action' = 14) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 = -1 & p2c2 = -1 & p2c3 > 0 & 
 			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/5:	(status' = 4) +
-		1/5:	(status' = 5) +
-		1/5:	(status' = 12) +
-		1/5:	(status' = 13) +
-		1/5:	(status' = 14) ;
+		1/4:	(action' = 4) +
+		1/4:	(action' = 5) +
+		1/4:	(action' = 11) +
+		1/4:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 = -1 & p2c2 = -1 & p2c3 > 0 & 
+			p1c1 < 1 & p1c2 < 1 & p1c3 > 0 ->
+		1/4:	(action' = 4) +
+		1/4:	(action' = 5) +
+		1/4:	(action' = 14) +
+		1/4:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 = -1 & p2c2 = -1 & p2c3 > 0 & 
+			p1c1 < 1 & p1c2 > 0 & p1c3 < 1 ->
+		1/4:	(action' = 4) +
+		1/4:	(action' = 5) +
+		1/4:	(action' = 13) +
+		1/4:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 = -1 & p2c2 = -1 & p2c3 > 0 & 
+			p1c1 < 1 & p1c2 > 0 & p1c3 > 0 ->
+		1/5:	(action' = 4) +
+		1/5:	(action' = 5) +
+		1/5:	(action' = 13) +
+		1/5:	(action' = 14) +
+		1/5:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 = -1 & p2c2 = -1 & p2c3 > 0 & 
+			p1c1 > 0 & p1c2 < 1 & p1c3 < 1 ->
+		1/4:	(action' = 4) +
+		1/4:	(action' = 5) +
+		1/4:	(action' = 12) +
+		1/4:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 = -1 & p2c2 = -1 & p2c3 > 0 & 
+			p1c1 > 0 & p1c2 < 1 & p1c3 > 0 ->
+		1/5:	(action' = 4) +
+		1/5:	(action' = 5) +
+		1/5:	(action' = 12) +
+		1/5:	(action' = 14) +
+		1/5:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 = -1 & p2c2 = -1 & p2c3 > 0 & 
+			p1c1 > 0 & p1c2 > 0 & p1c3 < 1 ->
+		1/5:	(action' = 4) +
+		1/5:	(action' = 5) +
+		1/5:	(action' = 12) +
+		1/5:	(action' = 13) +
+		1/5:	(action' = 35) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 = -1 & p2c3 > 0 & 
 			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/4:	(status' = 4) +
-		1/4:	(status' = 5) +
-		1/4:	(status' = 11) +
-		1/4:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 = -1 & p2c2 = -1 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/4:	(status' = 4) +
-		1/4:	(status' = 5) +
-		1/4:	(status' = 14) +
-		1/4:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 = -1 & p2c2 = -1 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/4:	(status' = 4) +
-		1/4:	(status' = 5) +
-		1/4:	(status' = 13) +
-		1/4:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 = -1 & p2c2 = -1 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/5:	(status' = 4) +
-		1/5:	(status' = 5) +
-		1/5:	(status' = 13) +
-		1/5:	(status' = 14) +
-		1/5:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 = -1 & p2c2 = -1 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/4:	(status' = 4) +
-		1/4:	(status' = 5) +
-		1/4:	(status' = 12) +
-		1/4:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 = -1 & p2c2 = -1 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/5:	(status' = 4) +
-		1/5:	(status' = 5) +
-		1/5:	(status' = 12) +
-		1/5:	(status' = 14) +
-		1/5:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 = -1 & p2c2 = -1 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/5:	(status' = 4) +
-		1/5:	(status' = 5) +
-		1/5:	(status' = 12) +
-		1/5:	(status' = 13) +
-		1/5:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 = -1 & p2c2 = -1 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/6:	(status' = 4) +
-		1/6:	(status' = 5) +
-		1/6:	(status' = 12) +
-		1/6:	(status' = 13) +
-		1/6:	(status' = 14) +
-		1/6:	(status' = 35) ;
+		1/6:	(action' = 4) +
+		1/6:	(action' = 5) +
+		1/6:	(action' = 12) +
+		1/6:	(action' = 13) +
+		1/6:	(action' = 14) +
+		1/6:	(action' = 35) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 = 0 & p2c3 = -1 & 
 			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/3:	(status' = 4) +
-		1/3:	(status' = 6) +
-		1/3:	(status' = 11) ;
+		1/3:	(action' = 4) +
+		1/3:	(action' = 6) +
+		1/3:	(action' = 11) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 = 0 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/3:	(status' = 4) +
-		1/3:	(status' = 6) +
-		1/3:	(status' = 14) ;
+			p1c1 < 1 & p1c2 < 1 & p1c3 > 0 ->
+		1/3:	(action' = 4) +
+		1/3:	(action' = 6) +
+		1/3:	(action' = 14) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 = 0 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/3:	(status' = 4) +
-		1/3:	(status' = 6) +
-		1/3:	(status' = 13) ;
+			p1c1 < 1 & p1c2 > 0 & p1c3 < 1 ->
+		1/3:	(action' = 4) +
+		1/3:	(action' = 6) +
+		1/3:	(action' = 13) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 = 0 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/4:	(status' = 4) +
-		1/4:	(status' = 6) +
-		1/4:	(status' = 13) +
-		1/4:	(status' = 14) ;
+			p1c1 < 1 & p1c2 > 0 & p1c3 > 0 ->
+		1/4:	(action' = 4) +
+		1/4:	(action' = 6) +
+		1/4:	(action' = 13) +
+		1/4:	(action' = 14) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 = 0 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/3:	(status' = 4) +
-		1/3:	(status' = 6) +
-		1/3:	(status' = 12) ;
+			p1c1 > 0 & p1c2 < 1 & p1c3 < 1 ->
+		1/3:	(action' = 4) +
+		1/3:	(action' = 6) +
+		1/3:	(action' = 12) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 = 0 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/4:	(status' = 4) +
-		1/4:	(status' = 6) +
-		1/4:	(status' = 12) +
-		1/4:	(status' = 14) ;
+			p1c1 > 0 & p1c2 < 1 & p1c3 > 0 ->
+		1/4:	(action' = 4) +
+		1/4:	(action' = 6) +
+		1/4:	(action' = 12) +
+		1/4:	(action' = 14) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 = 0 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/4:	(status' = 4) +
-		1/4:	(status' = 6) +
-		1/4:	(status' = 12) +
-		1/4:	(status' = 13) ;
+			p1c1 > 0 & p1c2 > 0 & p1c3 < 1 ->
+		1/4:	(action' = 4) +
+		1/4:	(action' = 6) +
+		1/4:	(action' = 12) +
+		1/4:	(action' = 13) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 = 0 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/5:	(status' = 4) +
-		1/5:	(status' = 6) +
-		1/5:	(status' = 12) +
-		1/5:	(status' = 13) +
-		1/5:	(status' = 14) ;
+			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
+		1/5:	(action' = 4) +
+		1/5:	(action' = 6) +
+		1/5:	(action' = 12) +
+		1/5:	(action' = 13) +
+		1/5:	(action' = 14) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 = 0 & p2c3 = 0 & 
 			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/2:	(status' = 4) +
-		1/2:	(status' = 11) ;
+		1/2:	(action' = 4) +
+		1/2:	(action' = 11) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 = 0 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/2:	(status' = 4) +
-		1/2:	(status' = 14) ;
+			p1c1 < 1 & p1c2 < 1 & p1c3 > 0 ->
+		1/2:	(action' = 4) +
+		1/2:	(action' = 14) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 = 0 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/2:	(status' = 4) +
-		1/2:	(status' = 13) ;
+			p1c1 < 1 & p1c2 > 0 & p1c3 < 1 ->
+		1/2:	(action' = 4) +
+		1/2:	(action' = 13) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 = 0 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/3:	(status' = 4) +
-		1/3:	(status' = 13) +
-		1/3:	(status' = 14) ;
+			p1c1 < 1 & p1c2 > 0 & p1c3 > 0 ->
+		1/3:	(action' = 4) +
+		1/3:	(action' = 13) +
+		1/3:	(action' = 14) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 = 0 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/2:	(status' = 4) +
-		1/2:	(status' = 12) ;
+			p1c1 > 0 & p1c2 < 1 & p1c3 < 1 ->
+		1/2:	(action' = 4) +
+		1/2:	(action' = 12) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 = 0 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/3:	(status' = 4) +
-		1/3:	(status' = 12) +
-		1/3:	(status' = 14) ;
+			p1c1 > 0 & p1c2 < 1 & p1c3 > 0 ->
+		1/3:	(action' = 4) +
+		1/3:	(action' = 12) +
+		1/3:	(action' = 14) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 = 0 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/3:	(status' = 4) +
-		1/3:	(status' = 12) +
-		1/3:	(status' = 13) ;
+			p1c1 > 0 & p1c2 > 0 & p1c3 < 1 ->
+		1/3:	(action' = 4) +
+		1/3:	(action' = 12) +
+		1/3:	(action' = 13) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 = 0 & p2c3 = 0 & 
+			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
+		1/4:	(action' = 4) +
+		1/4:	(action' = 12) +
+		1/4:	(action' = 13) +
+		1/4:	(action' = 14) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 = -1 & p2c2 = 0 & p2c3 > 0 & 
 			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/4:	(status' = 4) +
-		1/4:	(status' = 12) +
-		1/4:	(status' = 13) +
-		1/4:	(status' = 14) ;
+		1/3:	(action' = 4) +
+		1/3:	(action' = 11) +
+		1/3:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 = -1 & p2c2 = 0 & p2c3 > 0 & 
+			p1c1 < 1 & p1c2 < 1 & p1c3 > 0 ->
+		1/3:	(action' = 4) +
+		1/3:	(action' = 14) +
+		1/3:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 = -1 & p2c2 = 0 & p2c3 > 0 & 
+			p1c1 < 1 & p1c2 > 0 & p1c3 < 1 ->
+		1/3:	(action' = 4) +
+		1/3:	(action' = 13) +
+		1/3:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 = -1 & p2c2 = 0 & p2c3 > 0 & 
+			p1c1 < 1 & p1c2 > 0 & p1c3 > 0 ->
+		1/4:	(action' = 4) +
+		1/4:	(action' = 13) +
+		1/4:	(action' = 14) +
+		1/4:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 = -1 & p2c2 = 0 & p2c3 > 0 & 
+			p1c1 > 0 & p1c2 < 1 & p1c3 < 1 ->
+		1/3:	(action' = 4) +
+		1/3:	(action' = 12) +
+		1/3:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 = -1 & p2c2 = 0 & p2c3 > 0 & 
+			p1c1 > 0 & p1c2 < 1 & p1c3 > 0 ->
+		1/4:	(action' = 4) +
+		1/4:	(action' = 12) +
+		1/4:	(action' = 14) +
+		1/4:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 = -1 & p2c2 = 0 & p2c3 > 0 & 
+			p1c1 > 0 & p1c2 > 0 & p1c3 < 1 ->
+		1/4:	(action' = 4) +
+		1/4:	(action' = 12) +
+		1/4:	(action' = 13) +
+		1/4:	(action' = 35) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 = 0 & p2c3 > 0 & 
 			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/3:	(status' = 4) +
-		1/3:	(status' = 11) +
-		1/3:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 = -1 & p2c2 = 0 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/3:	(status' = 4) +
-		1/3:	(status' = 14) +
-		1/3:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 = -1 & p2c2 = 0 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/3:	(status' = 4) +
-		1/3:	(status' = 13) +
-		1/3:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 = -1 & p2c2 = 0 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/4:	(status' = 4) +
-		1/4:	(status' = 13) +
-		1/4:	(status' = 14) +
-		1/4:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 = -1 & p2c2 = 0 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/3:	(status' = 4) +
-		1/3:	(status' = 12) +
-		1/3:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 = -1 & p2c2 = 0 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/4:	(status' = 4) +
-		1/4:	(status' = 12) +
-		1/4:	(status' = 14) +
-		1/4:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 = -1 & p2c2 = 0 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/4:	(status' = 4) +
-		1/4:	(status' = 12) +
-		1/4:	(status' = 13) +
-		1/4:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 = -1 & p2c2 = 0 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/5:	(status' = 4) +
-		1/5:	(status' = 12) +
-		1/5:	(status' = 13) +
-		1/5:	(status' = 14) +
-		1/5:	(status' = 35) ;
+		1/5:	(action' = 4) +
+		1/5:	(action' = 12) +
+		1/5:	(action' = 13) +
+		1/5:	(action' = 14) +
+		1/5:	(action' = 35) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 > 0 & p2c3 = -1 & 
 			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/4:	(status' = 4) +
-		1/4:	(status' = 6) +
-		1/4:	(status' = 11) +
-		1/4:	(status' = 31) ;
+		1/4:	(action' = 4) +
+		1/4:	(action' = 6) +
+		1/4:	(action' = 11) +
+		1/4:	(action' = 31) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 > 0 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/5:	(status' = 4) +
-		1/5:	(status' = 6) +
-		1/5:	(status' = 14) +
-		1/5:	(status' = 31) +
-		1/5:	(status' = 34) ;
+			p1c1 < 1 & p1c2 < 1 & p1c3 > 0 ->
+		1/5:	(action' = 4) +
+		1/5:	(action' = 6) +
+		1/5:	(action' = 14) +
+		1/5:	(action' = 31) +
+		1/5:	(action' = 34) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 > 0 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/5:	(status' = 4) +
-		1/5:	(status' = 6) +
-		1/5:	(status' = 13) +
-		1/5:	(status' = 31) +
-		1/5:	(status' = 33) ;
+			p1c1 < 1 & p1c2 > 0 & p1c3 < 1 ->
+		1/5:	(action' = 4) +
+		1/5:	(action' = 6) +
+		1/5:	(action' = 13) +
+		1/5:	(action' = 31) +
+		1/5:	(action' = 33) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 > 0 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/7:	(status' = 4) +
-		1/7:	(status' = 6) +
-		1/7:	(status' = 13) +
-		1/7:	(status' = 14) +
-		1/7:	(status' = 31) +
-		1/7:	(status' = 33) +
-		1/7:	(status' = 34) ;
+			p1c1 < 1 & p1c2 > 0 & p1c3 > 0 ->
+		1/7:	(action' = 4) +
+		1/7:	(action' = 6) +
+		1/7:	(action' = 13) +
+		1/7:	(action' = 14) +
+		1/7:	(action' = 31) +
+		1/7:	(action' = 33) +
+		1/7:	(action' = 34) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 > 0 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/5:	(status' = 4) +
-		1/5:	(status' = 6) +
-		1/5:	(status' = 12) +
-		1/5:	(status' = 31) +
-		1/5:	(status' = 32) ;
+			p1c1 > 0 & p1c2 < 1 & p1c3 < 1 ->
+		1/5:	(action' = 4) +
+		1/5:	(action' = 6) +
+		1/5:	(action' = 12) +
+		1/5:	(action' = 31) +
+		1/5:	(action' = 32) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 > 0 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/7:	(status' = 4) +
-		1/7:	(status' = 6) +
-		1/7:	(status' = 12) +
-		1/7:	(status' = 14) +
-		1/7:	(status' = 31) +
-		1/7:	(status' = 32) +
-		1/7:	(status' = 34) ;
+			p1c1 > 0 & p1c2 < 1 & p1c3 > 0 ->
+		1/7:	(action' = 4) +
+		1/7:	(action' = 6) +
+		1/7:	(action' = 12) +
+		1/7:	(action' = 14) +
+		1/7:	(action' = 31) +
+		1/7:	(action' = 32) +
+		1/7:	(action' = 34) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 > 0 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/7:	(status' = 4) +
-		1/7:	(status' = 6) +
-		1/7:	(status' = 12) +
-		1/7:	(status' = 13) +
-		1/7:	(status' = 31) +
-		1/7:	(status' = 32) +
-		1/7:	(status' = 33) ;
+			p1c1 > 0 & p1c2 > 0 & p1c3 < 1 ->
+		1/7:	(action' = 4) +
+		1/7:	(action' = 6) +
+		1/7:	(action' = 12) +
+		1/7:	(action' = 13) +
+		1/7:	(action' = 31) +
+		1/7:	(action' = 32) +
+		1/7:	(action' = 33) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 > 0 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/9:	(status' = 4) +
-		1/9:	(status' = 6) +
-		1/9:	(status' = 12) +
-		1/9:	(status' = 13) +
-		1/9:	(status' = 14) +
-		1/9:	(status' = 31) +
-		1/9:	(status' = 32) +
-		1/9:	(status' = 33) +
-		1/9:	(status' = 34) ;
+			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
+		1/9:	(action' = 4) +
+		1/9:	(action' = 6) +
+		1/9:	(action' = 12) +
+		1/9:	(action' = 13) +
+		1/9:	(action' = 14) +
+		1/9:	(action' = 31) +
+		1/9:	(action' = 32) +
+		1/9:	(action' = 33) +
+		1/9:	(action' = 34) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 > 0 & p2c3 = 0 & 
 			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/3:	(status' = 4) +
-		1/3:	(status' = 11) +
-		1/3:	(status' = 31) ;
+		1/3:	(action' = 4) +
+		1/3:	(action' = 11) +
+		1/3:	(action' = 31) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 > 0 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/4:	(status' = 4) +
-		1/4:	(status' = 14) +
-		1/4:	(status' = 31) +
-		1/4:	(status' = 34) ;
+			p1c1 < 1 & p1c2 < 1 & p1c3 > 0 ->
+		1/4:	(action' = 4) +
+		1/4:	(action' = 14) +
+		1/4:	(action' = 31) +
+		1/4:	(action' = 34) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 > 0 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/4:	(status' = 4) +
-		1/4:	(status' = 13) +
-		1/4:	(status' = 31) +
-		1/4:	(status' = 33) ;
+			p1c1 < 1 & p1c2 > 0 & p1c3 < 1 ->
+		1/4:	(action' = 4) +
+		1/4:	(action' = 13) +
+		1/4:	(action' = 31) +
+		1/4:	(action' = 33) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 > 0 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/6:	(status' = 4) +
-		1/6:	(status' = 13) +
-		1/6:	(status' = 14) +
-		1/6:	(status' = 31) +
-		1/6:	(status' = 33) +
-		1/6:	(status' = 34) ;
+			p1c1 < 1 & p1c2 > 0 & p1c3 > 0 ->
+		1/6:	(action' = 4) +
+		1/6:	(action' = 13) +
+		1/6:	(action' = 14) +
+		1/6:	(action' = 31) +
+		1/6:	(action' = 33) +
+		1/6:	(action' = 34) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 > 0 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/4:	(status' = 4) +
-		1/4:	(status' = 12) +
-		1/4:	(status' = 31) +
-		1/4:	(status' = 32) ;
+			p1c1 > 0 & p1c2 < 1 & p1c3 < 1 ->
+		1/4:	(action' = 4) +
+		1/4:	(action' = 12) +
+		1/4:	(action' = 31) +
+		1/4:	(action' = 32) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 > 0 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/6:	(status' = 4) +
-		1/6:	(status' = 12) +
-		1/6:	(status' = 14) +
-		1/6:	(status' = 31) +
-		1/6:	(status' = 32) +
-		1/6:	(status' = 34) ;
+			p1c1 > 0 & p1c2 < 1 & p1c3 > 0 ->
+		1/6:	(action' = 4) +
+		1/6:	(action' = 12) +
+		1/6:	(action' = 14) +
+		1/6:	(action' = 31) +
+		1/6:	(action' = 32) +
+		1/6:	(action' = 34) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 > 0 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/6:	(status' = 4) +
-		1/6:	(status' = 12) +
-		1/6:	(status' = 13) +
-		1/6:	(status' = 31) +
-		1/6:	(status' = 32) +
-		1/6:	(status' = 33) ;
+			p1c1 > 0 & p1c2 > 0 & p1c3 < 1 ->
+		1/6:	(action' = 4) +
+		1/6:	(action' = 12) +
+		1/6:	(action' = 13) +
+		1/6:	(action' = 31) +
+		1/6:	(action' = 32) +
+		1/6:	(action' = 33) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 > 0 & p2c3 = 0 & 
+			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
+		1/8:	(action' = 4) +
+		1/8:	(action' = 12) +
+		1/8:	(action' = 13) +
+		1/8:	(action' = 14) +
+		1/8:	(action' = 31) +
+		1/8:	(action' = 32) +
+		1/8:	(action' = 33) +
+		1/8:	(action' = 34) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 = -1 & p2c2 > 0 & p2c3 > 0 & 
 			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/8:	(status' = 4) +
-		1/8:	(status' = 12) +
-		1/8:	(status' = 13) +
-		1/8:	(status' = 14) +
-		1/8:	(status' = 31) +
-		1/8:	(status' = 32) +
-		1/8:	(status' = 33) +
-		1/8:	(status' = 34) ;
+		1/4:	(action' = 4) +
+		1/4:	(action' = 11) +
+		1/4:	(action' = 31) +
+		1/4:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 = -1 & p2c2 > 0 & p2c3 > 0 & 
+			p1c1 < 1 & p1c2 < 1 & p1c3 > 0 ->
+		1/5:	(action' = 4) +
+		1/5:	(action' = 14) +
+		1/5:	(action' = 31) +
+		1/5:	(action' = 34) +
+		1/5:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 = -1 & p2c2 > 0 & p2c3 > 0 & 
+			p1c1 < 1 & p1c2 > 0 & p1c3 < 1 ->
+		1/5:	(action' = 4) +
+		1/5:	(action' = 13) +
+		1/5:	(action' = 31) +
+		1/5:	(action' = 33) +
+		1/5:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 = -1 & p2c2 > 0 & p2c3 > 0 & 
+			p1c1 < 1 & p1c2 > 0 & p1c3 > 0 ->
+		1/7:	(action' = 4) +
+		1/7:	(action' = 13) +
+		1/7:	(action' = 14) +
+		1/7:	(action' = 31) +
+		1/7:	(action' = 33) +
+		1/7:	(action' = 34) +
+		1/7:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 = -1 & p2c2 > 0 & p2c3 > 0 & 
+			p1c1 > 0 & p1c2 < 1 & p1c3 < 1 ->
+		1/5:	(action' = 4) +
+		1/5:	(action' = 12) +
+		1/5:	(action' = 31) +
+		1/5:	(action' = 32) +
+		1/5:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 = -1 & p2c2 > 0 & p2c3 > 0 & 
+			p1c1 > 0 & p1c2 < 1 & p1c3 > 0 ->
+		1/7:	(action' = 4) +
+		1/7:	(action' = 12) +
+		1/7:	(action' = 14) +
+		1/7:	(action' = 31) +
+		1/7:	(action' = 32) +
+		1/7:	(action' = 34) +
+		1/7:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 = -1 & p2c2 > 0 & p2c3 > 0 & 
+			p1c1 > 0 & p1c2 > 0 & p1c3 < 1 ->
+		1/7:	(action' = 4) +
+		1/7:	(action' = 12) +
+		1/7:	(action' = 13) +
+		1/7:	(action' = 31) +
+		1/7:	(action' = 32) +
+		1/7:	(action' = 33) +
+		1/7:	(action' = 35) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = -1 & p2c2 > 0 & p2c3 > 0 & 
 			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/4:	(status' = 4) +
-		1/4:	(status' = 11) +
-		1/4:	(status' = 31) +
-		1/4:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 = -1 & p2c2 > 0 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/5:	(status' = 4) +
-		1/5:	(status' = 14) +
-		1/5:	(status' = 31) +
-		1/5:	(status' = 34) +
-		1/5:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 = -1 & p2c2 > 0 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/5:	(status' = 4) +
-		1/5:	(status' = 13) +
-		1/5:	(status' = 31) +
-		1/5:	(status' = 33) +
-		1/5:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 = -1 & p2c2 > 0 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/7:	(status' = 4) +
-		1/7:	(status' = 13) +
-		1/7:	(status' = 14) +
-		1/7:	(status' = 31) +
-		1/7:	(status' = 33) +
-		1/7:	(status' = 34) +
-		1/7:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 = -1 & p2c2 > 0 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/5:	(status' = 4) +
-		1/5:	(status' = 12) +
-		1/5:	(status' = 31) +
-		1/5:	(status' = 32) +
-		1/5:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 = -1 & p2c2 > 0 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/7:	(status' = 4) +
-		1/7:	(status' = 12) +
-		1/7:	(status' = 14) +
-		1/7:	(status' = 31) +
-		1/7:	(status' = 32) +
-		1/7:	(status' = 34) +
-		1/7:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 = -1 & p2c2 > 0 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/7:	(status' = 4) +
-		1/7:	(status' = 12) +
-		1/7:	(status' = 13) +
-		1/7:	(status' = 31) +
-		1/7:	(status' = 32) +
-		1/7:	(status' = 33) +
-		1/7:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 = -1 & p2c2 > 0 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/9:	(status' = 4) +
-		1/9:	(status' = 12) +
-		1/9:	(status' = 13) +
-		1/9:	(status' = 14) +
-		1/9:	(status' = 31) +
-		1/9:	(status' = 32) +
-		1/9:	(status' = 33) +
-		1/9:	(status' = 34) +
-		1/9:	(status' = 35) ;
+		1/9:	(action' = 4) +
+		1/9:	(action' = 12) +
+		1/9:	(action' = 13) +
+		1/9:	(action' = 14) +
+		1/9:	(action' = 31) +
+		1/9:	(action' = 32) +
+		1/9:	(action' = 33) +
+		1/9:	(action' = 34) +
+		1/9:	(action' = 35) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 = -1 & p2c3 = -1 & 
 			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/3:	(status' = 5) +
-		1/3:	(status' = 6) +
-		1/3:	(status' = 11) ;
+		1/3:	(action' = 5) +
+		1/3:	(action' = 6) +
+		1/3:	(action' = 11) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 = -1 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/3:	(status' = 5) +
-		1/3:	(status' = 6) +
-		1/3:	(status' = 14) ;
+			p1c1 < 1 & p1c2 < 1 & p1c3 > 0 ->
+		1/3:	(action' = 5) +
+		1/3:	(action' = 6) +
+		1/3:	(action' = 14) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 = -1 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/3:	(status' = 5) +
-		1/3:	(status' = 6) +
-		1/3:	(status' = 13) ;
+			p1c1 < 1 & p1c2 > 0 & p1c3 < 1 ->
+		1/3:	(action' = 5) +
+		1/3:	(action' = 6) +
+		1/3:	(action' = 13) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 = -1 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/4:	(status' = 5) +
-		1/4:	(status' = 6) +
-		1/4:	(status' = 13) +
-		1/4:	(status' = 14) ;
+			p1c1 < 1 & p1c2 > 0 & p1c3 > 0 ->
+		1/4:	(action' = 5) +
+		1/4:	(action' = 6) +
+		1/4:	(action' = 13) +
+		1/4:	(action' = 14) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 = -1 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/3:	(status' = 5) +
-		1/3:	(status' = 6) +
-		1/3:	(status' = 12) ;
+			p1c1 > 0 & p1c2 < 1 & p1c3 < 1 ->
+		1/3:	(action' = 5) +
+		1/3:	(action' = 6) +
+		1/3:	(action' = 12) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 = -1 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/4:	(status' = 5) +
-		1/4:	(status' = 6) +
-		1/4:	(status' = 12) +
-		1/4:	(status' = 14) ;
+			p1c1 > 0 & p1c2 < 1 & p1c3 > 0 ->
+		1/4:	(action' = 5) +
+		1/4:	(action' = 6) +
+		1/4:	(action' = 12) +
+		1/4:	(action' = 14) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 = -1 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/4:	(status' = 5) +
-		1/4:	(status' = 6) +
-		1/4:	(status' = 12) +
-		1/4:	(status' = 13) ;
+			p1c1 > 0 & p1c2 > 0 & p1c3 < 1 ->
+		1/4:	(action' = 5) +
+		1/4:	(action' = 6) +
+		1/4:	(action' = 12) +
+		1/4:	(action' = 13) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 = -1 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/5:	(status' = 5) +
-		1/5:	(status' = 6) +
-		1/5:	(status' = 12) +
-		1/5:	(status' = 13) +
-		1/5:	(status' = 14) ;
+			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
+		1/5:	(action' = 5) +
+		1/5:	(action' = 6) +
+		1/5:	(action' = 12) +
+		1/5:	(action' = 13) +
+		1/5:	(action' = 14) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 = -1 & p2c3 = 0 & 
 			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/2:	(status' = 5) +
-		1/2:	(status' = 11) ;
+		1/2:	(action' = 5) +
+		1/2:	(action' = 11) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 = -1 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/2:	(status' = 5) +
-		1/2:	(status' = 14) ;
+			p1c1 < 1 & p1c2 < 1 & p1c3 > 0 ->
+		1/2:	(action' = 5) +
+		1/2:	(action' = 14) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 = -1 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/2:	(status' = 5) +
-		1/2:	(status' = 13) ;
+			p1c1 < 1 & p1c2 > 0 & p1c3 < 1 ->
+		1/2:	(action' = 5) +
+		1/2:	(action' = 13) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 = -1 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/3:	(status' = 5) +
-		1/3:	(status' = 13) +
-		1/3:	(status' = 14) ;
+			p1c1 < 1 & p1c2 > 0 & p1c3 > 0 ->
+		1/3:	(action' = 5) +
+		1/3:	(action' = 13) +
+		1/3:	(action' = 14) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 = -1 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/2:	(status' = 5) +
-		1/2:	(status' = 12) ;
+			p1c1 > 0 & p1c2 < 1 & p1c3 < 1 ->
+		1/2:	(action' = 5) +
+		1/2:	(action' = 12) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 = -1 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/3:	(status' = 5) +
-		1/3:	(status' = 12) +
-		1/3:	(status' = 14) ;
+			p1c1 > 0 & p1c2 < 1 & p1c3 > 0 ->
+		1/3:	(action' = 5) +
+		1/3:	(action' = 12) +
+		1/3:	(action' = 14) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 = -1 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/3:	(status' = 5) +
-		1/3:	(status' = 12) +
-		1/3:	(status' = 13) ;
+			p1c1 > 0 & p1c2 > 0 & p1c3 < 1 ->
+		1/3:	(action' = 5) +
+		1/3:	(action' = 12) +
+		1/3:	(action' = 13) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 = -1 & p2c3 = 0 & 
+			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
+		1/4:	(action' = 5) +
+		1/4:	(action' = 12) +
+		1/4:	(action' = 13) +
+		1/4:	(action' = 14) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 = 0 & p2c2 = -1 & p2c3 > 0 & 
 			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/4:	(status' = 5) +
-		1/4:	(status' = 12) +
-		1/4:	(status' = 13) +
-		1/4:	(status' = 14) ;
+		1/3:	(action' = 5) +
+		1/3:	(action' = 11) +
+		1/3:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 = 0 & p2c2 = -1 & p2c3 > 0 & 
+			p1c1 < 1 & p1c2 < 1 & p1c3 > 0 ->
+		1/3:	(action' = 5) +
+		1/3:	(action' = 14) +
+		1/3:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 = 0 & p2c2 = -1 & p2c3 > 0 & 
+			p1c1 < 1 & p1c2 > 0 & p1c3 < 1 ->
+		1/3:	(action' = 5) +
+		1/3:	(action' = 13) +
+		1/3:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 = 0 & p2c2 = -1 & p2c3 > 0 & 
+			p1c1 < 1 & p1c2 > 0 & p1c3 > 0 ->
+		1/4:	(action' = 5) +
+		1/4:	(action' = 13) +
+		1/4:	(action' = 14) +
+		1/4:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 = 0 & p2c2 = -1 & p2c3 > 0 & 
+			p1c1 > 0 & p1c2 < 1 & p1c3 < 1 ->
+		1/3:	(action' = 5) +
+		1/3:	(action' = 12) +
+		1/3:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 = 0 & p2c2 = -1 & p2c3 > 0 & 
+			p1c1 > 0 & p1c2 < 1 & p1c3 > 0 ->
+		1/4:	(action' = 5) +
+		1/4:	(action' = 12) +
+		1/4:	(action' = 14) +
+		1/4:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 = 0 & p2c2 = -1 & p2c3 > 0 & 
+			p1c1 > 0 & p1c2 > 0 & p1c3 < 1 ->
+		1/4:	(action' = 5) +
+		1/4:	(action' = 12) +
+		1/4:	(action' = 13) +
+		1/4:	(action' = 35) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 = -1 & p2c3 > 0 & 
 			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/3:	(status' = 5) +
-		1/3:	(status' = 11) +
-		1/3:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 = 0 & p2c2 = -1 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/3:	(status' = 5) +
-		1/3:	(status' = 14) +
-		1/3:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 = 0 & p2c2 = -1 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/3:	(status' = 5) +
-		1/3:	(status' = 13) +
-		1/3:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 = 0 & p2c2 = -1 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/4:	(status' = 5) +
-		1/4:	(status' = 13) +
-		1/4:	(status' = 14) +
-		1/4:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 = 0 & p2c2 = -1 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/3:	(status' = 5) +
-		1/3:	(status' = 12) +
-		1/3:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 = 0 & p2c2 = -1 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/4:	(status' = 5) +
-		1/4:	(status' = 12) +
-		1/4:	(status' = 14) +
-		1/4:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 = 0 & p2c2 = -1 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/4:	(status' = 5) +
-		1/4:	(status' = 12) +
-		1/4:	(status' = 13) +
-		1/4:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 = 0 & p2c2 = -1 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/5:	(status' = 5) +
-		1/5:	(status' = 12) +
-		1/5:	(status' = 13) +
-		1/5:	(status' = 14) +
-		1/5:	(status' = 35) ;
+		1/5:	(action' = 5) +
+		1/5:	(action' = 12) +
+		1/5:	(action' = 13) +
+		1/5:	(action' = 14) +
+		1/5:	(action' = 35) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 = 0 & p2c3 = -1 & 
 			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/2:	(status' = 6) +
-		1/2:	(status' = 11) ;
+		1/2:	(action' = 6) +
+		1/2:	(action' = 11) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 = 0 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/2:	(status' = 6) +
-		1/2:	(status' = 14) ;
+			p1c1 < 1 & p1c2 < 1 & p1c3 > 0 ->
+		1/2:	(action' = 6) +
+		1/2:	(action' = 14) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 = 0 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/2:	(status' = 6) +
-		1/2:	(status' = 13) ;
+			p1c1 < 1 & p1c2 > 0 & p1c3 < 1 ->
+		1/2:	(action' = 6) +
+		1/2:	(action' = 13) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 = 0 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/3:	(status' = 6) +
-		1/3:	(status' = 13) +
-		1/3:	(status' = 14) ;
+			p1c1 < 1 & p1c2 > 0 & p1c3 > 0 ->
+		1/3:	(action' = 6) +
+		1/3:	(action' = 13) +
+		1/3:	(action' = 14) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 = 0 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/2:	(status' = 6) +
-		1/2:	(status' = 12) ;
+			p1c1 > 0 & p1c2 < 1 & p1c3 < 1 ->
+		1/2:	(action' = 6) +
+		1/2:	(action' = 12) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 = 0 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/3:	(status' = 6) +
-		1/3:	(status' = 12) +
-		1/3:	(status' = 14) ;
+			p1c1 > 0 & p1c2 < 1 & p1c3 > 0 ->
+		1/3:	(action' = 6) +
+		1/3:	(action' = 12) +
+		1/3:	(action' = 14) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 = 0 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/3:	(status' = 6) +
-		1/3:	(status' = 12) +
-		1/3:	(status' = 13) ;
+			p1c1 > 0 & p1c2 > 0 & p1c3 < 1 ->
+		1/3:	(action' = 6) +
+		1/3:	(action' = 12) +
+		1/3:	(action' = 13) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 = 0 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/4:	(status' = 6) +
-		1/4:	(status' = 12) +
-		1/4:	(status' = 13) +
-		1/4:	(status' = 14) ;
+			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
+		1/4:	(action' = 6) +
+		1/4:	(action' = 12) +
+		1/4:	(action' = 13) +
+		1/4:	(action' = 14) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 = 0 & p2c3 = 0 & 
 			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/1:	(status' = 11) ;
+		1/1:	(action' = 11) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 = 0 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/1:	(status' = 14) ;
+			p1c1 < 1 & p1c2 < 1 & p1c3 > 0 ->
+		1/1:	(action' = 14) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 = 0 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/1:	(status' = 13) ;
+			p1c1 < 1 & p1c2 > 0 & p1c3 < 1 ->
+		1/1:	(action' = 13) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 = 0 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/2:	(status' = 13) +
-		1/2:	(status' = 14) ;
+			p1c1 < 1 & p1c2 > 0 & p1c3 > 0 ->
+		1/2:	(action' = 13) +
+		1/2:	(action' = 14) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 = 0 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/1:	(status' = 12) ;
+			p1c1 > 0 & p1c2 < 1 & p1c3 < 1 ->
+		1/1:	(action' = 12) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 = 0 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/2:	(status' = 12) +
-		1/2:	(status' = 14) ;
+			p1c1 > 0 & p1c2 < 1 & p1c3 > 0 ->
+		1/2:	(action' = 12) +
+		1/2:	(action' = 14) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 = 0 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/2:	(status' = 12) +
-		1/2:	(status' = 13) ;
+			p1c1 > 0 & p1c2 > 0 & p1c3 < 1 ->
+		1/2:	(action' = 12) +
+		1/2:	(action' = 13) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 = 0 & p2c3 = 0 & 
+			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
+		1/3:	(action' = 12) +
+		1/3:	(action' = 13) +
+		1/3:	(action' = 14) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 = 0 & p2c2 = 0 & p2c3 > 0 & 
 			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/3:	(status' = 12) +
-		1/3:	(status' = 13) +
-		1/3:	(status' = 14) ;
+		1/2:	(action' = 11) +
+		1/2:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 = 0 & p2c2 = 0 & p2c3 > 0 & 
+			p1c1 < 1 & p1c2 < 1 & p1c3 > 0 ->
+		1/2:	(action' = 14) +
+		1/2:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 = 0 & p2c2 = 0 & p2c3 > 0 & 
+			p1c1 < 1 & p1c2 > 0 & p1c3 < 1 ->
+		1/2:	(action' = 13) +
+		1/2:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 = 0 & p2c2 = 0 & p2c3 > 0 & 
+			p1c1 < 1 & p1c2 > 0 & p1c3 > 0 ->
+		1/3:	(action' = 13) +
+		1/3:	(action' = 14) +
+		1/3:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 = 0 & p2c2 = 0 & p2c3 > 0 & 
+			p1c1 > 0 & p1c2 < 1 & p1c3 < 1 ->
+		1/2:	(action' = 12) +
+		1/2:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 = 0 & p2c2 = 0 & p2c3 > 0 & 
+			p1c1 > 0 & p1c2 < 1 & p1c3 > 0 ->
+		1/3:	(action' = 12) +
+		1/3:	(action' = 14) +
+		1/3:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 = 0 & p2c2 = 0 & p2c3 > 0 & 
+			p1c1 > 0 & p1c2 > 0 & p1c3 < 1 ->
+		1/3:	(action' = 12) +
+		1/3:	(action' = 13) +
+		1/3:	(action' = 35) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 = 0 & p2c3 > 0 & 
 			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/2:	(status' = 11) +
-		1/2:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 = 0 & p2c2 = 0 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/2:	(status' = 14) +
-		1/2:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 = 0 & p2c2 = 0 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/2:	(status' = 13) +
-		1/2:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 = 0 & p2c2 = 0 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/3:	(status' = 13) +
-		1/3:	(status' = 14) +
-		1/3:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 = 0 & p2c2 = 0 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/2:	(status' = 12) +
-		1/2:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 = 0 & p2c2 = 0 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/3:	(status' = 12) +
-		1/3:	(status' = 14) +
-		1/3:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 = 0 & p2c2 = 0 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/3:	(status' = 12) +
-		1/3:	(status' = 13) +
-		1/3:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 = 0 & p2c2 = 0 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/4:	(status' = 12) +
-		1/4:	(status' = 13) +
-		1/4:	(status' = 14) +
-		1/4:	(status' = 35) ;
+		1/4:	(action' = 12) +
+		1/4:	(action' = 13) +
+		1/4:	(action' = 14) +
+		1/4:	(action' = 35) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 > 0 & p2c3 = -1 & 
 			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/3:	(status' = 6) +
-		1/3:	(status' = 11) +
-		1/3:	(status' = 31) ;
+		1/3:	(action' = 6) +
+		1/3:	(action' = 11) +
+		1/3:	(action' = 31) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 > 0 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/4:	(status' = 6) +
-		1/4:	(status' = 14) +
-		1/4:	(status' = 31) +
-		1/4:	(status' = 34) ;
+			p1c1 < 1 & p1c2 < 1 & p1c3 > 0 ->
+		1/4:	(action' = 6) +
+		1/4:	(action' = 14) +
+		1/4:	(action' = 31) +
+		1/4:	(action' = 34) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 > 0 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/4:	(status' = 6) +
-		1/4:	(status' = 13) +
-		1/4:	(status' = 31) +
-		1/4:	(status' = 33) ;
+			p1c1 < 1 & p1c2 > 0 & p1c3 < 1 ->
+		1/4:	(action' = 6) +
+		1/4:	(action' = 13) +
+		1/4:	(action' = 31) +
+		1/4:	(action' = 33) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 > 0 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/6:	(status' = 6) +
-		1/6:	(status' = 13) +
-		1/6:	(status' = 14) +
-		1/6:	(status' = 31) +
-		1/6:	(status' = 33) +
-		1/6:	(status' = 34) ;
+			p1c1 < 1 & p1c2 > 0 & p1c3 > 0 ->
+		1/6:	(action' = 6) +
+		1/6:	(action' = 13) +
+		1/6:	(action' = 14) +
+		1/6:	(action' = 31) +
+		1/6:	(action' = 33) +
+		1/6:	(action' = 34) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 > 0 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/4:	(status' = 6) +
-		1/4:	(status' = 12) +
-		1/4:	(status' = 31) +
-		1/4:	(status' = 32) ;
+			p1c1 > 0 & p1c2 < 1 & p1c3 < 1 ->
+		1/4:	(action' = 6) +
+		1/4:	(action' = 12) +
+		1/4:	(action' = 31) +
+		1/4:	(action' = 32) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 > 0 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/6:	(status' = 6) +
-		1/6:	(status' = 12) +
-		1/6:	(status' = 14) +
-		1/6:	(status' = 31) +
-		1/6:	(status' = 32) +
-		1/6:	(status' = 34) ;
+			p1c1 > 0 & p1c2 < 1 & p1c3 > 0 ->
+		1/6:	(action' = 6) +
+		1/6:	(action' = 12) +
+		1/6:	(action' = 14) +
+		1/6:	(action' = 31) +
+		1/6:	(action' = 32) +
+		1/6:	(action' = 34) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 > 0 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/6:	(status' = 6) +
-		1/6:	(status' = 12) +
-		1/6:	(status' = 13) +
-		1/6:	(status' = 31) +
-		1/6:	(status' = 32) +
-		1/6:	(status' = 33) ;
+			p1c1 > 0 & p1c2 > 0 & p1c3 < 1 ->
+		1/6:	(action' = 6) +
+		1/6:	(action' = 12) +
+		1/6:	(action' = 13) +
+		1/6:	(action' = 31) +
+		1/6:	(action' = 32) +
+		1/6:	(action' = 33) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 > 0 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/8:	(status' = 6) +
-		1/8:	(status' = 12) +
-		1/8:	(status' = 13) +
-		1/8:	(status' = 14) +
-		1/8:	(status' = 31) +
-		1/8:	(status' = 32) +
-		1/8:	(status' = 33) +
-		1/8:	(status' = 34) ;
+			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
+		1/8:	(action' = 6) +
+		1/8:	(action' = 12) +
+		1/8:	(action' = 13) +
+		1/8:	(action' = 14) +
+		1/8:	(action' = 31) +
+		1/8:	(action' = 32) +
+		1/8:	(action' = 33) +
+		1/8:	(action' = 34) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 > 0 & p2c3 = 0 & 
 			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/2:	(status' = 11) +
-		1/2:	(status' = 31) ;
+		1/2:	(action' = 11) +
+		1/2:	(action' = 31) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 > 0 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/3:	(status' = 14) +
-		1/3:	(status' = 31) +
-		1/3:	(status' = 34) ;
+			p1c1 < 1 & p1c2 < 1 & p1c3 > 0 ->
+		1/3:	(action' = 14) +
+		1/3:	(action' = 31) +
+		1/3:	(action' = 34) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 > 0 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/3:	(status' = 13) +
-		1/3:	(status' = 31) +
-		1/3:	(status' = 33) ;
+			p1c1 < 1 & p1c2 > 0 & p1c3 < 1 ->
+		1/3:	(action' = 13) +
+		1/3:	(action' = 31) +
+		1/3:	(action' = 33) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 > 0 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/5:	(status' = 13) +
-		1/5:	(status' = 14) +
-		1/5:	(status' = 31) +
-		1/5:	(status' = 33) +
-		1/5:	(status' = 34) ;
+			p1c1 < 1 & p1c2 > 0 & p1c3 > 0 ->
+		1/5:	(action' = 13) +
+		1/5:	(action' = 14) +
+		1/5:	(action' = 31) +
+		1/5:	(action' = 33) +
+		1/5:	(action' = 34) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 > 0 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/3:	(status' = 12) +
-		1/3:	(status' = 31) +
-		1/3:	(status' = 32) ;
+			p1c1 > 0 & p1c2 < 1 & p1c3 < 1 ->
+		1/3:	(action' = 12) +
+		1/3:	(action' = 31) +
+		1/3:	(action' = 32) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 > 0 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/5:	(status' = 12) +
-		1/5:	(status' = 14) +
-		1/5:	(status' = 31) +
-		1/5:	(status' = 32) +
-		1/5:	(status' = 34) ;
+			p1c1 > 0 & p1c2 < 1 & p1c3 > 0 ->
+		1/5:	(action' = 12) +
+		1/5:	(action' = 14) +
+		1/5:	(action' = 31) +
+		1/5:	(action' = 32) +
+		1/5:	(action' = 34) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 > 0 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/5:	(status' = 12) +
-		1/5:	(status' = 13) +
-		1/5:	(status' = 31) +
-		1/5:	(status' = 32) +
-		1/5:	(status' = 33) ;
+			p1c1 > 0 & p1c2 > 0 & p1c3 < 1 ->
+		1/5:	(action' = 12) +
+		1/5:	(action' = 13) +
+		1/5:	(action' = 31) +
+		1/5:	(action' = 32) +
+		1/5:	(action' = 33) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 > 0 & p2c3 = 0 & 
+			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
+		1/7:	(action' = 12) +
+		1/7:	(action' = 13) +
+		1/7:	(action' = 14) +
+		1/7:	(action' = 31) +
+		1/7:	(action' = 32) +
+		1/7:	(action' = 33) +
+		1/7:	(action' = 34) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 = 0 & p2c2 > 0 & p2c3 > 0 & 
 			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/7:	(status' = 12) +
-		1/7:	(status' = 13) +
-		1/7:	(status' = 14) +
-		1/7:	(status' = 31) +
-		1/7:	(status' = 32) +
-		1/7:	(status' = 33) +
-		1/7:	(status' = 34) ;
+		1/3:	(action' = 11) +
+		1/3:	(action' = 31) +
+		1/3:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 = 0 & p2c2 > 0 & p2c3 > 0 & 
+			p1c1 < 1 & p1c2 < 1 & p1c3 > 0 ->
+		1/4:	(action' = 14) +
+		1/4:	(action' = 31) +
+		1/4:	(action' = 34) +
+		1/4:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 = 0 & p2c2 > 0 & p2c3 > 0 & 
+			p1c1 < 1 & p1c2 > 0 & p1c3 < 1 ->
+		1/4:	(action' = 13) +
+		1/4:	(action' = 31) +
+		1/4:	(action' = 33) +
+		1/4:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 = 0 & p2c2 > 0 & p2c3 > 0 & 
+			p1c1 < 1 & p1c2 > 0 & p1c3 > 0 ->
+		1/6:	(action' = 13) +
+		1/6:	(action' = 14) +
+		1/6:	(action' = 31) +
+		1/6:	(action' = 33) +
+		1/6:	(action' = 34) +
+		1/6:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 = 0 & p2c2 > 0 & p2c3 > 0 & 
+			p1c1 > 0 & p1c2 < 1 & p1c3 < 1 ->
+		1/4:	(action' = 12) +
+		1/4:	(action' = 31) +
+		1/4:	(action' = 32) +
+		1/4:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 = 0 & p2c2 > 0 & p2c3 > 0 & 
+			p1c1 > 0 & p1c2 < 1 & p1c3 > 0 ->
+		1/6:	(action' = 12) +
+		1/6:	(action' = 14) +
+		1/6:	(action' = 31) +
+		1/6:	(action' = 32) +
+		1/6:	(action' = 34) +
+		1/6:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 = 0 & p2c2 > 0 & p2c3 > 0 & 
+			p1c1 > 0 & p1c2 > 0 & p1c3 < 1 ->
+		1/6:	(action' = 12) +
+		1/6:	(action' = 13) +
+		1/6:	(action' = 31) +
+		1/6:	(action' = 32) +
+		1/6:	(action' = 33) +
+		1/6:	(action' = 35) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 = 0 & p2c2 > 0 & p2c3 > 0 & 
 			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/3:	(status' = 11) +
-		1/3:	(status' = 31) +
-		1/3:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 = 0 & p2c2 > 0 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/4:	(status' = 14) +
-		1/4:	(status' = 31) +
-		1/4:	(status' = 34) +
-		1/4:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 = 0 & p2c2 > 0 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/4:	(status' = 13) +
-		1/4:	(status' = 31) +
-		1/4:	(status' = 33) +
-		1/4:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 = 0 & p2c2 > 0 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/6:	(status' = 13) +
-		1/6:	(status' = 14) +
-		1/6:	(status' = 31) +
-		1/6:	(status' = 33) +
-		1/6:	(status' = 34) +
-		1/6:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 = 0 & p2c2 > 0 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/4:	(status' = 12) +
-		1/4:	(status' = 31) +
-		1/4:	(status' = 32) +
-		1/4:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 = 0 & p2c2 > 0 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/6:	(status' = 12) +
-		1/6:	(status' = 14) +
-		1/6:	(status' = 31) +
-		1/6:	(status' = 32) +
-		1/6:	(status' = 34) +
-		1/6:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 = 0 & p2c2 > 0 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/6:	(status' = 12) +
-		1/6:	(status' = 13) +
-		1/6:	(status' = 31) +
-		1/6:	(status' = 32) +
-		1/6:	(status' = 33) +
-		1/6:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 = 0 & p2c2 > 0 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/8:	(status' = 12) +
-		1/8:	(status' = 13) +
-		1/8:	(status' = 14) +
-		1/8:	(status' = 31) +
-		1/8:	(status' = 32) +
-		1/8:	(status' = 33) +
-		1/8:	(status' = 34) +
-		1/8:	(status' = 35) ;
+		1/8:	(action' = 12) +
+		1/8:	(action' = 13) +
+		1/8:	(action' = 14) +
+		1/8:	(action' = 31) +
+		1/8:	(action' = 32) +
+		1/8:	(action' = 33) +
+		1/8:	(action' = 34) +
+		1/8:	(action' = 35) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 = -1 & p2c3 = -1 & 
 			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/4:	(status' = 5) +
-		1/4:	(status' = 6) +
-		1/4:	(status' = 11) +
-		1/4:	(status' = 27) ;
+		1/4:	(action' = 5) +
+		1/4:	(action' = 6) +
+		1/4:	(action' = 11) +
+		1/4:	(action' = 27) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 = -1 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/4:	(status' = 5) +
-		1/4:	(status' = 6) +
-		1/4:	(status' = 14) +
-		1/4:	(status' = 30) ;
+			p1c1 < 1 & p1c2 < 1 & p1c3 > 0 ->
+		1/4:	(action' = 5) +
+		1/4:	(action' = 6) +
+		1/4:	(action' = 14) +
+		1/4:	(action' = 30) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 = -1 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/4:	(status' = 5) +
-		1/4:	(status' = 6) +
-		1/4:	(status' = 13) +
-		1/4:	(status' = 29) ;
+			p1c1 < 1 & p1c2 > 0 & p1c3 < 1 ->
+		1/4:	(action' = 5) +
+		1/4:	(action' = 6) +
+		1/4:	(action' = 13) +
+		1/4:	(action' = 29) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 = -1 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/6:	(status' = 5) +
-		1/6:	(status' = 6) +
-		1/6:	(status' = 13) +
-		1/6:	(status' = 14) +
-		1/6:	(status' = 29) +
-		1/6:	(status' = 30) ;
+			p1c1 < 1 & p1c2 > 0 & p1c3 > 0 ->
+		1/6:	(action' = 5) +
+		1/6:	(action' = 6) +
+		1/6:	(action' = 13) +
+		1/6:	(action' = 14) +
+		1/6:	(action' = 29) +
+		1/6:	(action' = 30) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 = -1 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/4:	(status' = 5) +
-		1/4:	(status' = 6) +
-		1/4:	(status' = 12) +
-		1/4:	(status' = 28) ;
+			p1c1 > 0 & p1c2 < 1 & p1c3 < 1 ->
+		1/4:	(action' = 5) +
+		1/4:	(action' = 6) +
+		1/4:	(action' = 12) +
+		1/4:	(action' = 28) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 = -1 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/6:	(status' = 5) +
-		1/6:	(status' = 6) +
-		1/6:	(status' = 12) +
-		1/6:	(status' = 14) +
-		1/6:	(status' = 28) +
-		1/6:	(status' = 30) ;
+			p1c1 > 0 & p1c2 < 1 & p1c3 > 0 ->
+		1/6:	(action' = 5) +
+		1/6:	(action' = 6) +
+		1/6:	(action' = 12) +
+		1/6:	(action' = 14) +
+		1/6:	(action' = 28) +
+		1/6:	(action' = 30) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 = -1 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/6:	(status' = 5) +
-		1/6:	(status' = 6) +
-		1/6:	(status' = 12) +
-		1/6:	(status' = 13) +
-		1/6:	(status' = 28) +
-		1/6:	(status' = 29) ;
+			p1c1 > 0 & p1c2 > 0 & p1c3 < 1 ->
+		1/6:	(action' = 5) +
+		1/6:	(action' = 6) +
+		1/6:	(action' = 12) +
+		1/6:	(action' = 13) +
+		1/6:	(action' = 28) +
+		1/6:	(action' = 29) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 = -1 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/8:	(status' = 5) +
-		1/8:	(status' = 6) +
-		1/8:	(status' = 12) +
-		1/8:	(status' = 13) +
-		1/8:	(status' = 14) +
-		1/8:	(status' = 28) +
-		1/8:	(status' = 29) +
-		1/8:	(status' = 30) ;
+			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
+		1/8:	(action' = 5) +
+		1/8:	(action' = 6) +
+		1/8:	(action' = 12) +
+		1/8:	(action' = 13) +
+		1/8:	(action' = 14) +
+		1/8:	(action' = 28) +
+		1/8:	(action' = 29) +
+		1/8:	(action' = 30) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 = -1 & p2c3 = 0 & 
 			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/3:	(status' = 5) +
-		1/3:	(status' = 11) +
-		1/3:	(status' = 27) ;
+		1/3:	(action' = 5) +
+		1/3:	(action' = 11) +
+		1/3:	(action' = 27) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 = -1 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/3:	(status' = 5) +
-		1/3:	(status' = 14) +
-		1/3:	(status' = 30) ;
+			p1c1 < 1 & p1c2 < 1 & p1c3 > 0 ->
+		1/3:	(action' = 5) +
+		1/3:	(action' = 14) +
+		1/3:	(action' = 30) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 = -1 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/3:	(status' = 5) +
-		1/3:	(status' = 13) +
-		1/3:	(status' = 29) ;
+			p1c1 < 1 & p1c2 > 0 & p1c3 < 1 ->
+		1/3:	(action' = 5) +
+		1/3:	(action' = 13) +
+		1/3:	(action' = 29) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 = -1 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/5:	(status' = 5) +
-		1/5:	(status' = 13) +
-		1/5:	(status' = 14) +
-		1/5:	(status' = 29) +
-		1/5:	(status' = 30) ;
+			p1c1 < 1 & p1c2 > 0 & p1c3 > 0 ->
+		1/5:	(action' = 5) +
+		1/5:	(action' = 13) +
+		1/5:	(action' = 14) +
+		1/5:	(action' = 29) +
+		1/5:	(action' = 30) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 = -1 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/3:	(status' = 5) +
-		1/3:	(status' = 12) +
-		1/3:	(status' = 28) ;
+			p1c1 > 0 & p1c2 < 1 & p1c3 < 1 ->
+		1/3:	(action' = 5) +
+		1/3:	(action' = 12) +
+		1/3:	(action' = 28) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 = -1 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/5:	(status' = 5) +
-		1/5:	(status' = 12) +
-		1/5:	(status' = 14) +
-		1/5:	(status' = 28) +
-		1/5:	(status' = 30) ;
+			p1c1 > 0 & p1c2 < 1 & p1c3 > 0 ->
+		1/5:	(action' = 5) +
+		1/5:	(action' = 12) +
+		1/5:	(action' = 14) +
+		1/5:	(action' = 28) +
+		1/5:	(action' = 30) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 = -1 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/5:	(status' = 5) +
-		1/5:	(status' = 12) +
-		1/5:	(status' = 13) +
-		1/5:	(status' = 28) +
-		1/5:	(status' = 29) ;
+			p1c1 > 0 & p1c2 > 0 & p1c3 < 1 ->
+		1/5:	(action' = 5) +
+		1/5:	(action' = 12) +
+		1/5:	(action' = 13) +
+		1/5:	(action' = 28) +
+		1/5:	(action' = 29) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 = -1 & p2c3 = 0 & 
+			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
+		1/7:	(action' = 5) +
+		1/7:	(action' = 12) +
+		1/7:	(action' = 13) +
+		1/7:	(action' = 14) +
+		1/7:	(action' = 28) +
+		1/7:	(action' = 29) +
+		1/7:	(action' = 30) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 > 0 & p2c2 = -1 & p2c3 > 0 & 
 			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/7:	(status' = 5) +
-		1/7:	(status' = 12) +
-		1/7:	(status' = 13) +
-		1/7:	(status' = 14) +
-		1/7:	(status' = 28) +
-		1/7:	(status' = 29) +
-		1/7:	(status' = 30) ;
+		1/4:	(action' = 5) +
+		1/4:	(action' = 11) +
+		1/4:	(action' = 27) +
+		1/4:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 > 0 & p2c2 = -1 & p2c3 > 0 & 
+			p1c1 < 1 & p1c2 < 1 & p1c3 > 0 ->
+		1/4:	(action' = 5) +
+		1/4:	(action' = 14) +
+		1/4:	(action' = 30) +
+		1/4:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 > 0 & p2c2 = -1 & p2c3 > 0 & 
+			p1c1 < 1 & p1c2 > 0 & p1c3 < 1 ->
+		1/4:	(action' = 5) +
+		1/4:	(action' = 13) +
+		1/4:	(action' = 29) +
+		1/4:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 > 0 & p2c2 = -1 & p2c3 > 0 & 
+			p1c1 < 1 & p1c2 > 0 & p1c3 > 0 ->
+		1/6:	(action' = 5) +
+		1/6:	(action' = 13) +
+		1/6:	(action' = 14) +
+		1/6:	(action' = 29) +
+		1/6:	(action' = 30) +
+		1/6:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 > 0 & p2c2 = -1 & p2c3 > 0 & 
+			p1c1 > 0 & p1c2 < 1 & p1c3 < 1 ->
+		1/4:	(action' = 5) +
+		1/4:	(action' = 12) +
+		1/4:	(action' = 28) +
+		1/4:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 > 0 & p2c2 = -1 & p2c3 > 0 & 
+			p1c1 > 0 & p1c2 < 1 & p1c3 > 0 ->
+		1/6:	(action' = 5) +
+		1/6:	(action' = 12) +
+		1/6:	(action' = 14) +
+		1/6:	(action' = 28) +
+		1/6:	(action' = 30) +
+		1/6:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 > 0 & p2c2 = -1 & p2c3 > 0 & 
+			p1c1 > 0 & p1c2 > 0 & p1c3 < 1 ->
+		1/6:	(action' = 5) +
+		1/6:	(action' = 12) +
+		1/6:	(action' = 13) +
+		1/6:	(action' = 28) +
+		1/6:	(action' = 29) +
+		1/6:	(action' = 35) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 = -1 & p2c3 > 0 & 
 			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/4:	(status' = 5) +
-		1/4:	(status' = 11) +
-		1/4:	(status' = 27) +
-		1/4:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 > 0 & p2c2 = -1 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/4:	(status' = 5) +
-		1/4:	(status' = 14) +
-		1/4:	(status' = 30) +
-		1/4:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 > 0 & p2c2 = -1 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/4:	(status' = 5) +
-		1/4:	(status' = 13) +
-		1/4:	(status' = 29) +
-		1/4:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 > 0 & p2c2 = -1 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/6:	(status' = 5) +
-		1/6:	(status' = 13) +
-		1/6:	(status' = 14) +
-		1/6:	(status' = 29) +
-		1/6:	(status' = 30) +
-		1/6:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 > 0 & p2c2 = -1 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/4:	(status' = 5) +
-		1/4:	(status' = 12) +
-		1/4:	(status' = 28) +
-		1/4:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 > 0 & p2c2 = -1 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/6:	(status' = 5) +
-		1/6:	(status' = 12) +
-		1/6:	(status' = 14) +
-		1/6:	(status' = 28) +
-		1/6:	(status' = 30) +
-		1/6:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 > 0 & p2c2 = -1 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/6:	(status' = 5) +
-		1/6:	(status' = 12) +
-		1/6:	(status' = 13) +
-		1/6:	(status' = 28) +
-		1/6:	(status' = 29) +
-		1/6:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 > 0 & p2c2 = -1 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/8:	(status' = 5) +
-		1/8:	(status' = 12) +
-		1/8:	(status' = 13) +
-		1/8:	(status' = 14) +
-		1/8:	(status' = 28) +
-		1/8:	(status' = 29) +
-		1/8:	(status' = 30) +
-		1/8:	(status' = 35) ;
+		1/8:	(action' = 5) +
+		1/8:	(action' = 12) +
+		1/8:	(action' = 13) +
+		1/8:	(action' = 14) +
+		1/8:	(action' = 28) +
+		1/8:	(action' = 29) +
+		1/8:	(action' = 30) +
+		1/8:	(action' = 35) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 = 0 & p2c3 = -1 & 
 			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/3:	(status' = 6) +
-		1/3:	(status' = 11) +
-		1/3:	(status' = 27) ;
+		1/3:	(action' = 6) +
+		1/3:	(action' = 11) +
+		1/3:	(action' = 27) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 = 0 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/3:	(status' = 6) +
-		1/3:	(status' = 14) +
-		1/3:	(status' = 30) ;
+			p1c1 < 1 & p1c2 < 1 & p1c3 > 0 ->
+		1/3:	(action' = 6) +
+		1/3:	(action' = 14) +
+		1/3:	(action' = 30) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 = 0 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/3:	(status' = 6) +
-		1/3:	(status' = 13) +
-		1/3:	(status' = 29) ;
+			p1c1 < 1 & p1c2 > 0 & p1c3 < 1 ->
+		1/3:	(action' = 6) +
+		1/3:	(action' = 13) +
+		1/3:	(action' = 29) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 = 0 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/5:	(status' = 6) +
-		1/5:	(status' = 13) +
-		1/5:	(status' = 14) +
-		1/5:	(status' = 29) +
-		1/5:	(status' = 30) ;
+			p1c1 < 1 & p1c2 > 0 & p1c3 > 0 ->
+		1/5:	(action' = 6) +
+		1/5:	(action' = 13) +
+		1/5:	(action' = 14) +
+		1/5:	(action' = 29) +
+		1/5:	(action' = 30) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 = 0 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/3:	(status' = 6) +
-		1/3:	(status' = 12) +
-		1/3:	(status' = 28) ;
+			p1c1 > 0 & p1c2 < 1 & p1c3 < 1 ->
+		1/3:	(action' = 6) +
+		1/3:	(action' = 12) +
+		1/3:	(action' = 28) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 = 0 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/5:	(status' = 6) +
-		1/5:	(status' = 12) +
-		1/5:	(status' = 14) +
-		1/5:	(status' = 28) +
-		1/5:	(status' = 30) ;
+			p1c1 > 0 & p1c2 < 1 & p1c3 > 0 ->
+		1/5:	(action' = 6) +
+		1/5:	(action' = 12) +
+		1/5:	(action' = 14) +
+		1/5:	(action' = 28) +
+		1/5:	(action' = 30) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 = 0 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/5:	(status' = 6) +
-		1/5:	(status' = 12) +
-		1/5:	(status' = 13) +
-		1/5:	(status' = 28) +
-		1/5:	(status' = 29) ;
+			p1c1 > 0 & p1c2 > 0 & p1c3 < 1 ->
+		1/5:	(action' = 6) +
+		1/5:	(action' = 12) +
+		1/5:	(action' = 13) +
+		1/5:	(action' = 28) +
+		1/5:	(action' = 29) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 = 0 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/7:	(status' = 6) +
-		1/7:	(status' = 12) +
-		1/7:	(status' = 13) +
-		1/7:	(status' = 14) +
-		1/7:	(status' = 28) +
-		1/7:	(status' = 29) +
-		1/7:	(status' = 30) ;
+			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
+		1/7:	(action' = 6) +
+		1/7:	(action' = 12) +
+		1/7:	(action' = 13) +
+		1/7:	(action' = 14) +
+		1/7:	(action' = 28) +
+		1/7:	(action' = 29) +
+		1/7:	(action' = 30) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 = 0 & p2c3 = 0 & 
 			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/2:	(status' = 11) +
-		1/2:	(status' = 27) ;
+		1/2:	(action' = 11) +
+		1/2:	(action' = 27) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 = 0 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/2:	(status' = 14) +
-		1/2:	(status' = 30) ;
+			p1c1 < 1 & p1c2 < 1 & p1c3 > 0 ->
+		1/2:	(action' = 14) +
+		1/2:	(action' = 30) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 = 0 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/2:	(status' = 13) +
-		1/2:	(status' = 29) ;
+			p1c1 < 1 & p1c2 > 0 & p1c3 < 1 ->
+		1/2:	(action' = 13) +
+		1/2:	(action' = 29) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 = 0 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/4:	(status' = 13) +
-		1/4:	(status' = 14) +
-		1/4:	(status' = 29) +
-		1/4:	(status' = 30) ;
+			p1c1 < 1 & p1c2 > 0 & p1c3 > 0 ->
+		1/4:	(action' = 13) +
+		1/4:	(action' = 14) +
+		1/4:	(action' = 29) +
+		1/4:	(action' = 30) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 = 0 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/2:	(status' = 12) +
-		1/2:	(status' = 28) ;
+			p1c1 > 0 & p1c2 < 1 & p1c3 < 1 ->
+		1/2:	(action' = 12) +
+		1/2:	(action' = 28) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 = 0 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/4:	(status' = 12) +
-		1/4:	(status' = 14) +
-		1/4:	(status' = 28) +
-		1/4:	(status' = 30) ;
+			p1c1 > 0 & p1c2 < 1 & p1c3 > 0 ->
+		1/4:	(action' = 12) +
+		1/4:	(action' = 14) +
+		1/4:	(action' = 28) +
+		1/4:	(action' = 30) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 = 0 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/4:	(status' = 12) +
-		1/4:	(status' = 13) +
-		1/4:	(status' = 28) +
-		1/4:	(status' = 29) ;
+			p1c1 > 0 & p1c2 > 0 & p1c3 < 1 ->
+		1/4:	(action' = 12) +
+		1/4:	(action' = 13) +
+		1/4:	(action' = 28) +
+		1/4:	(action' = 29) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 = 0 & p2c3 = 0 & 
+			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
+		1/6:	(action' = 12) +
+		1/6:	(action' = 13) +
+		1/6:	(action' = 14) +
+		1/6:	(action' = 28) +
+		1/6:	(action' = 29) +
+		1/6:	(action' = 30) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 > 0 & p2c2 = 0 & p2c3 > 0 & 
 			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/6:	(status' = 12) +
-		1/6:	(status' = 13) +
-		1/6:	(status' = 14) +
-		1/6:	(status' = 28) +
-		1/6:	(status' = 29) +
-		1/6:	(status' = 30) ;
+		1/3:	(action' = 11) +
+		1/3:	(action' = 27) +
+		1/3:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 > 0 & p2c2 = 0 & p2c3 > 0 & 
+			p1c1 < 1 & p1c2 < 1 & p1c3 > 0 ->
+		1/3:	(action' = 14) +
+		1/3:	(action' = 30) +
+		1/3:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 > 0 & p2c2 = 0 & p2c3 > 0 & 
+			p1c1 < 1 & p1c2 > 0 & p1c3 < 1 ->
+		1/3:	(action' = 13) +
+		1/3:	(action' = 29) +
+		1/3:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 > 0 & p2c2 = 0 & p2c3 > 0 & 
+			p1c1 < 1 & p1c2 > 0 & p1c3 > 0 ->
+		1/5:	(action' = 13) +
+		1/5:	(action' = 14) +
+		1/5:	(action' = 29) +
+		1/5:	(action' = 30) +
+		1/5:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 > 0 & p2c2 = 0 & p2c3 > 0 & 
+			p1c1 > 0 & p1c2 < 1 & p1c3 < 1 ->
+		1/3:	(action' = 12) +
+		1/3:	(action' = 28) +
+		1/3:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 > 0 & p2c2 = 0 & p2c3 > 0 & 
+			p1c1 > 0 & p1c2 < 1 & p1c3 > 0 ->
+		1/5:	(action' = 12) +
+		1/5:	(action' = 14) +
+		1/5:	(action' = 28) +
+		1/5:	(action' = 30) +
+		1/5:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 > 0 & p2c2 = 0 & p2c3 > 0 & 
+			p1c1 > 0 & p1c2 > 0 & p1c3 < 1 ->
+		1/5:	(action' = 12) +
+		1/5:	(action' = 13) +
+		1/5:	(action' = 28) +
+		1/5:	(action' = 29) +
+		1/5:	(action' = 35) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 = 0 & p2c3 > 0 & 
 			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/3:	(status' = 11) +
-		1/3:	(status' = 27) +
-		1/3:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 > 0 & p2c2 = 0 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/3:	(status' = 14) +
-		1/3:	(status' = 30) +
-		1/3:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 > 0 & p2c2 = 0 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/3:	(status' = 13) +
-		1/3:	(status' = 29) +
-		1/3:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 > 0 & p2c2 = 0 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/5:	(status' = 13) +
-		1/5:	(status' = 14) +
-		1/5:	(status' = 29) +
-		1/5:	(status' = 30) +
-		1/5:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 > 0 & p2c2 = 0 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/3:	(status' = 12) +
-		1/3:	(status' = 28) +
-		1/3:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 > 0 & p2c2 = 0 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/5:	(status' = 12) +
-		1/5:	(status' = 14) +
-		1/5:	(status' = 28) +
-		1/5:	(status' = 30) +
-		1/5:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 > 0 & p2c2 = 0 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/5:	(status' = 12) +
-		1/5:	(status' = 13) +
-		1/5:	(status' = 28) +
-		1/5:	(status' = 29) +
-		1/5:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 > 0 & p2c2 = 0 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/7:	(status' = 12) +
-		1/7:	(status' = 13) +
-		1/7:	(status' = 14) +
-		1/7:	(status' = 28) +
-		1/7:	(status' = 29) +
-		1/7:	(status' = 30) +
-		1/7:	(status' = 35) ;
+		1/7:	(action' = 12) +
+		1/7:	(action' = 13) +
+		1/7:	(action' = 14) +
+		1/7:	(action' = 28) +
+		1/7:	(action' = 29) +
+		1/7:	(action' = 30) +
+		1/7:	(action' = 35) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 > 0 & p2c3 = -1 & 
 			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/4:	(status' = 6) +
-		1/4:	(status' = 11) +
-		1/4:	(status' = 27) +
-		1/4:	(status' = 31) ;
+		1/4:	(action' = 6) +
+		1/4:	(action' = 11) +
+		1/4:	(action' = 27) +
+		1/4:	(action' = 31) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 > 0 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/5:	(status' = 6) +
-		1/5:	(status' = 14) +
-		1/5:	(status' = 30) +
-		1/5:	(status' = 31) +
-		1/5:	(status' = 34) ;
+			p1c1 < 1 & p1c2 < 1 & p1c3 > 0 ->
+		1/5:	(action' = 6) +
+		1/5:	(action' = 14) +
+		1/5:	(action' = 30) +
+		1/5:	(action' = 31) +
+		1/5:	(action' = 34) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 > 0 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/5:	(status' = 6) +
-		1/5:	(status' = 13) +
-		1/5:	(status' = 29) +
-		1/5:	(status' = 31) +
-		1/5:	(status' = 33) ;
+			p1c1 < 1 & p1c2 > 0 & p1c3 < 1 ->
+		1/5:	(action' = 6) +
+		1/5:	(action' = 13) +
+		1/5:	(action' = 29) +
+		1/5:	(action' = 31) +
+		1/5:	(action' = 33) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 > 0 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/8:	(status' = 6) +
-		1/8:	(status' = 13) +
-		1/8:	(status' = 14) +
-		1/8:	(status' = 29) +
-		1/8:	(status' = 30) +
-		1/8:	(status' = 31) +
-		1/8:	(status' = 33) +
-		1/8:	(status' = 34) ;
+			p1c1 < 1 & p1c2 > 0 & p1c3 > 0 ->
+		1/8:	(action' = 6) +
+		1/8:	(action' = 13) +
+		1/8:	(action' = 14) +
+		1/8:	(action' = 29) +
+		1/8:	(action' = 30) +
+		1/8:	(action' = 31) +
+		1/8:	(action' = 33) +
+		1/8:	(action' = 34) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 > 0 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/5:	(status' = 6) +
-		1/5:	(status' = 12) +
-		1/5:	(status' = 28) +
-		1/5:	(status' = 31) +
-		1/5:	(status' = 32) ;
+			p1c1 > 0 & p1c2 < 1 & p1c3 < 1 ->
+		1/5:	(action' = 6) +
+		1/5:	(action' = 12) +
+		1/5:	(action' = 28) +
+		1/5:	(action' = 31) +
+		1/5:	(action' = 32) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 > 0 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/8:	(status' = 6) +
-		1/8:	(status' = 12) +
-		1/8:	(status' = 14) +
-		1/8:	(status' = 28) +
-		1/8:	(status' = 30) +
-		1/8:	(status' = 31) +
-		1/8:	(status' = 32) +
-		1/8:	(status' = 34) ;
+			p1c1 > 0 & p1c2 < 1 & p1c3 > 0 ->
+		1/8:	(action' = 6) +
+		1/8:	(action' = 12) +
+		1/8:	(action' = 14) +
+		1/8:	(action' = 28) +
+		1/8:	(action' = 30) +
+		1/8:	(action' = 31) +
+		1/8:	(action' = 32) +
+		1/8:	(action' = 34) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 > 0 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/8:	(status' = 6) +
-		1/8:	(status' = 12) +
-		1/8:	(status' = 13) +
-		1/8:	(status' = 28) +
-		1/8:	(status' = 29) +
-		1/8:	(status' = 31) +
-		1/8:	(status' = 32) +
-		1/8:	(status' = 33) ;
+			p1c1 > 0 & p1c2 > 0 & p1c3 < 1 ->
+		1/8:	(action' = 6) +
+		1/8:	(action' = 12) +
+		1/8:	(action' = 13) +
+		1/8:	(action' = 28) +
+		1/8:	(action' = 29) +
+		1/8:	(action' = 31) +
+		1/8:	(action' = 32) +
+		1/8:	(action' = 33) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 > 0 & p2c3 = -1 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/11:	(status' = 6) +
-		1/11:	(status' = 12) +
-		1/11:	(status' = 13) +
-		1/11:	(status' = 14) +
-		1/11:	(status' = 28) +
-		1/11:	(status' = 29) +
-		1/11:	(status' = 30) +
-		1/11:	(status' = 31) +
-		1/11:	(status' = 32) +
-		1/11:	(status' = 33) +
-		1/11:	(status' = 34) ;
+			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
+		1/11:	(action' = 6) +
+		1/11:	(action' = 12) +
+		1/11:	(action' = 13) +
+		1/11:	(action' = 14) +
+		1/11:	(action' = 28) +
+		1/11:	(action' = 29) +
+		1/11:	(action' = 30) +
+		1/11:	(action' = 31) +
+		1/11:	(action' = 32) +
+		1/11:	(action' = 33) +
+		1/11:	(action' = 34) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 > 0 & p2c3 = 0 & 
 			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/3:	(status' = 11) +
-		1/3:	(status' = 27) +
-		1/3:	(status' = 31) ;
+		1/3:	(action' = 11) +
+		1/3:	(action' = 27) +
+		1/3:	(action' = 31) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 > 0 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/4:	(status' = 14) +
-		1/4:	(status' = 30) +
-		1/4:	(status' = 31) +
-		1/4:	(status' = 34) ;
+			p1c1 < 1 & p1c2 < 1 & p1c3 > 0 ->
+		1/4:	(action' = 14) +
+		1/4:	(action' = 30) +
+		1/4:	(action' = 31) +
+		1/4:	(action' = 34) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 > 0 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/4:	(status' = 13) +
-		1/4:	(status' = 29) +
-		1/4:	(status' = 31) +
-		1/4:	(status' = 33) ;
+			p1c1 < 1 & p1c2 > 0 & p1c3 < 1 ->
+		1/4:	(action' = 13) +
+		1/4:	(action' = 29) +
+		1/4:	(action' = 31) +
+		1/4:	(action' = 33) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 > 0 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/7:	(status' = 13) +
-		1/7:	(status' = 14) +
-		1/7:	(status' = 29) +
-		1/7:	(status' = 30) +
-		1/7:	(status' = 31) +
-		1/7:	(status' = 33) +
-		1/7:	(status' = 34) ;
+			p1c1 < 1 & p1c2 > 0 & p1c3 > 0 ->
+		1/7:	(action' = 13) +
+		1/7:	(action' = 14) +
+		1/7:	(action' = 29) +
+		1/7:	(action' = 30) +
+		1/7:	(action' = 31) +
+		1/7:	(action' = 33) +
+		1/7:	(action' = 34) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 > 0 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/4:	(status' = 12) +
-		1/4:	(status' = 28) +
-		1/4:	(status' = 31) +
-		1/4:	(status' = 32) ;
+			p1c1 > 0 & p1c2 < 1 & p1c3 < 1 ->
+		1/4:	(action' = 12) +
+		1/4:	(action' = 28) +
+		1/4:	(action' = 31) +
+		1/4:	(action' = 32) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 > 0 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/7:	(status' = 12) +
-		1/7:	(status' = 14) +
-		1/7:	(status' = 28) +
-		1/7:	(status' = 30) +
-		1/7:	(status' = 31) +
-		1/7:	(status' = 32) +
-		1/7:	(status' = 34) ;
+			p1c1 > 0 & p1c2 < 1 & p1c3 > 0 ->
+		1/7:	(action' = 12) +
+		1/7:	(action' = 14) +
+		1/7:	(action' = 28) +
+		1/7:	(action' = 30) +
+		1/7:	(action' = 31) +
+		1/7:	(action' = 32) +
+		1/7:	(action' = 34) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 > 0 & p2c3 = 0 & 
-			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/7:	(status' = 12) +
-		1/7:	(status' = 13) +
-		1/7:	(status' = 28) +
-		1/7:	(status' = 29) +
-		1/7:	(status' = 31) +
-		1/7:	(status' = 32) +
-		1/7:	(status' = 33) ;
+			p1c1 > 0 & p1c2 > 0 & p1c3 < 1 ->
+		1/7:	(action' = 12) +
+		1/7:	(action' = 13) +
+		1/7:	(action' = 28) +
+		1/7:	(action' = 29) +
+		1/7:	(action' = 31) +
+		1/7:	(action' = 32) +
+		1/7:	(action' = 33) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 > 0 & p2c3 = 0 & 
+			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
+		1/10:	(action' = 12) +
+		1/10:	(action' = 13) +
+		1/10:	(action' = 14) +
+		1/10:	(action' = 28) +
+		1/10:	(action' = 29) +
+		1/10:	(action' = 30) +
+		1/10:	(action' = 31) +
+		1/10:	(action' = 32) +
+		1/10:	(action' = 33) +
+		1/10:	(action' = 34) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 > 0 & p2c2 > 0 & p2c3 > 0 & 
 			p1c1 < 1 & p1c2 < 1 & p1c3 < 1 ->
-		1/10:	(status' = 12) +
-		1/10:	(status' = 13) +
-		1/10:	(status' = 14) +
-		1/10:	(status' = 28) +
-		1/10:	(status' = 29) +
-		1/10:	(status' = 30) +
-		1/10:	(status' = 31) +
-		1/10:	(status' = 32) +
-		1/10:	(status' = 33) +
-		1/10:	(status' = 34) ;
+		1/4:	(action' = 11) +
+		1/4:	(action' = 27) +
+		1/4:	(action' = 31) +
+		1/4:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 > 0 & p2c2 > 0 & p2c3 > 0 & 
+			p1c1 < 1 & p1c2 < 1 & p1c3 > 0 ->
+		1/5:	(action' = 14) +
+		1/5:	(action' = 30) +
+		1/5:	(action' = 31) +
+		1/5:	(action' = 34) +
+		1/5:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 > 0 & p2c2 > 0 & p2c3 > 0 & 
+			p1c1 < 1 & p1c2 > 0 & p1c3 < 1 ->
+		1/5:	(action' = 13) +
+		1/5:	(action' = 29) +
+		1/5:	(action' = 31) +
+		1/5:	(action' = 33) +
+		1/5:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 > 0 & p2c2 > 0 & p2c3 > 0 & 
+			p1c1 < 1 & p1c2 > 0 & p1c3 > 0 ->
+		1/8:	(action' = 13) +
+		1/8:	(action' = 14) +
+		1/8:	(action' = 29) +
+		1/8:	(action' = 30) +
+		1/8:	(action' = 31) +
+		1/8:	(action' = 33) +
+		1/8:	(action' = 34) +
+		1/8:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 > 0 & p2c2 > 0 & p2c3 > 0 & 
+			p1c1 > 0 & p1c2 < 1 & p1c3 < 1 ->
+		1/5:	(action' = 12) +
+		1/5:	(action' = 28) +
+		1/5:	(action' = 31) +
+		1/5:	(action' = 32) +
+		1/5:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 > 0 & p2c2 > 0 & p2c3 > 0 & 
+			p1c1 > 0 & p1c2 < 1 & p1c3 > 0 ->
+		1/8:	(action' = 12) +
+		1/8:	(action' = 14) +
+		1/8:	(action' = 28) +
+		1/8:	(action' = 30) +
+		1/8:	(action' = 31) +
+		1/8:	(action' = 32) +
+		1/8:	(action' = 34) +
+		1/8:	(action' = 35) ;
+	[player_2_turn] action = 0 & turn_clock = 2 &
+			p2c1 > 0 & p2c2 > 0 & p2c3 > 0 & 
+			p1c1 > 0 & p1c2 > 0 & p1c3 < 1 ->
+		1/8:	(action' = 12) +
+		1/8:	(action' = 13) +
+		1/8:	(action' = 28) +
+		1/8:	(action' = 29) +
+		1/8:	(action' = 31) +
+		1/8:	(action' = 32) +
+		1/8:	(action' = 33) +
+		1/8:	(action' = 35) ;
 	[player_2_turn] action = 0 & turn_clock = 2 &
 			p2c1 > 0 & p2c2 > 0 & p2c3 > 0 & 
 			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/4:	(status' = 11) +
-		1/4:	(status' = 27) +
-		1/4:	(status' = 31) +
-		1/4:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 > 0 & p2c2 > 0 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/5:	(status' = 14) +
-		1/5:	(status' = 30) +
-		1/5:	(status' = 31) +
-		1/5:	(status' = 34) +
-		1/5:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 > 0 & p2c2 > 0 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/5:	(status' = 13) +
-		1/5:	(status' = 29) +
-		1/5:	(status' = 31) +
-		1/5:	(status' = 33) +
-		1/5:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 > 0 & p2c2 > 0 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/8:	(status' = 13) +
-		1/8:	(status' = 14) +
-		1/8:	(status' = 29) +
-		1/8:	(status' = 30) +
-		1/8:	(status' = 31) +
-		1/8:	(status' = 33) +
-		1/8:	(status' = 34) +
-		1/8:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 > 0 & p2c2 > 0 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/5:	(status' = 12) +
-		1/5:	(status' = 28) +
-		1/5:	(status' = 31) +
-		1/5:	(status' = 32) +
-		1/5:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 > 0 & p2c2 > 0 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/8:	(status' = 12) +
-		1/8:	(status' = 14) +
-		1/8:	(status' = 28) +
-		1/8:	(status' = 30) +
-		1/8:	(status' = 31) +
-		1/8:	(status' = 32) +
-		1/8:	(status' = 34) +
-		1/8:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 > 0 & p2c2 > 0 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/8:	(status' = 12) +
-		1/8:	(status' = 13) +
-		1/8:	(status' = 28) +
-		1/8:	(status' = 29) +
-		1/8:	(status' = 31) +
-		1/8:	(status' = 32) +
-		1/8:	(status' = 33) +
-		1/8:	(status' = 35) ;
-	[player_2_turn] action = 0 & turn_clock = 2 &
-			p2c1 > 0 & p2c2 > 0 & p2c3 > 0 & 
-			p1c1 > 0 & p1c2 > 0 & p1c3 > 0 ->
-		1/11:	(status' = 12) +
-		1/11:	(status' = 13) +
-		1/11:	(status' = 14) +
-		1/11:	(status' = 28) +
-		1/11:	(status' = 29) +
-		1/11:	(status' = 30) +
-		1/11:	(status' = 31) +
-		1/11:	(status' = 32) +
-		1/11:	(status' = 33) +
-		1/11:	(status' = 34) +
-		1/11:	(status' = 35) ;
+		1/11:	(action' = 12) +
+		1/11:	(action' = 13) +
+		1/11:	(action' = 14) +
+		1/11:	(action' = 28) +
+		1/11:	(action' = 29) +
+		1/11:	(action' = 30) +
+		1/11:	(action' = 31) +
+		1/11:	(action' = 32) +
+		1/11:	(action' = 33) +
+		1/11:	(action' = 34) +
+		1/11:	(action' = 35) ;
 
 // Actions
 	[p1_draw_p1c1]		action = 1 & p1c1 = -1 ->
