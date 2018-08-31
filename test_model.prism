@@ -1,7 +1,7 @@
 mdp
 
 //Player 1:
-const int p1_hea = 8;
+const int p1_hea = 5;
 const int p1_dmg = 1;
 
 	//Card 1: KNIGHT
@@ -20,7 +20,7 @@ const int p1c3_dmg = 2;
 const double p1c3_acc = 0.7
 ;
 //Player 2:
-const int p2_hea = 8;
+const int p2_hea = 5;
 const int p2_dmg = 1;
 
 	//Card 1: KNIGHT

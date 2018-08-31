@@ -68,6 +68,8 @@ def gen_archer_guard_health(bool):
         return "> 0"
     return "<= 0"
 
+# Difficult:
+# Takes list of archer targets and archer reference and generates command to hit (giving all possible permutations)
 def gen_archer_comm(attacks, actor):
     # hits 4
     acc = actor + "_acc"
@@ -85,7 +87,7 @@ def gen_archer_comm(attacks, actor):
                 if t == 1 and j > 2:
                     print "\n\t\t\t\t\t",
                 if t == j-1:
-                    print "& (action' = 39) +"              # CORRECT
+                    print "& (action' = 39) +"
     # hits all but one (1/2, 2/3 or 3/4)
         if len(attacks)-1 == j:
             for i in range(len(attacks)):
@@ -98,7 +100,7 @@ def gen_archer_comm(attacks, actor):
                             print "&",
                         if act_index == 2 and len(attacks) > 2:
                             print "\n\t\t\t\t\t",
-                print "(action' = 39) + "                   # CORRECT
+                print "(action' = 39) + "
     # hits all but two (2/4 or 1/3)
         if len(attacks)-2 == j:
             if len(attacks) == 4:
@@ -161,7 +163,7 @@ def gen_archer_comm(attacks, actor):
     else:
         print "\t\t1-"+acc+"\t\t: (action' = 39);\n"
 
-
+# Takes action and index and prints guard and command
 def display_action_guard_comm(action, i):
     buff_string = "\t"
     if len(action) < 8:
@@ -201,8 +203,8 @@ def display_action_guard_comm(action, i):
                 print label3 + "\n" + comm3
                 print label4 + "\n" + comm4 + "\n"
             elif len(actor) <= 2:           # hero attack, no accuracy
-                print label + "& " + target + " > 0 ->"
-                print "\t\t\t\t\t(" + target + "' = " + target + " - 1) & (action' = 39);"
+                print label + " & " + target + " > 0 ->"
+                print "\t\t\t\t\t(" + target + "' = " + target + " - 1) & (action' = 39);\n"
             else:
                 # 2 labels, 2 comms (second comm ensures health is never negative)
                 label1 = label + " & " + target + " > " + actor + "_dmg ->"
