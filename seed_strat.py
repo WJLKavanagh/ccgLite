@@ -58,45 +58,6 @@ def is_rogue(card):
         candidate_deck = [p2_deck[0], p2_deck[1], p2_deck[2]]
     return candidate_deck[int(card[3])-1] == "R"
 
-"""
-# Take a command from the comm_list and print the guard
-def display_guard_command(action, i):
-    label = "\t[player_"+str(t)+"_turn] action = 0 & turn_clock = " + str(t) + " & "
-    if action.split("_")[1] == "draw":              # Action is a card draw
-        print label + action.split("_")[2] + " = -1 ->"
-    elif action.split("_")[1] == "hero":            # Action is a hero attack
-        if "c" not in action[-4:]:                           # Target is enemy hero
-            print label + "p" + str(3-t) + "c1 < 1",
-            print "& p" + str(3-t) + "c2 < 1 & p" + str(3-t) + "c3 < 1 ->"
-        else:                                               # Target is enemy card
-            print label + action.split("_")[-1] + " > 0 ->"
-    elif action.split("_")[1] == "attack":          # If action belongs to K/R/G
-        if len(action.split("_")) > 3:                      # Target is enemy hero
-            print label + action.split("_")[0] + " > 0",
-            if is_rogue(action.split("_")[0]):                  # Rogues ignore enemy track when targetting hero
-                print "->"
-            else:
-                print "& p" + str(3-t) + "c1 < 1",
-                print "& p" + str(3-t) + "c2 < 1 & p" + str(3-t) + "c3 < 1 ->"
-        else:                                               # Target is enemy card
-            print label + action.split("_")[0] + " > 0 & " + action.split("_")[-1] + " > 0 ->"
-    elif action.split("_")[1] == "attacks":         # If action belongs to A
-        print label + action.split("_")[0] + " > 0 ->"
-    elif action.split("_")[1] == "heal":            # action belongs to P
-        if "c" not in action[-4:]:                           # Target is hero
-            print label + action.split("_")[0] + " > 0 & " + action[:2] + " < " + action[:2] + "_hea ->"
-        else:
-            if action[2:4] != action[-2:]:             # If healing self
-                print label + action.split("_")[0] + " > 0 & " + action[:2] + action[-2:] + " > 0 &",
-                print action[:2] + action[-2:] + " < " + action[:2] + action[-2:] + "_hea ->"
-            else:
-                print label + action.split("_")[0] + " > 0 &",
-                print action[:2] + action[-2:] + " < " + action[:2] + action[-2:] + "_hea ->"
-    else:
-        print "Oh crumbs"                           # This shouldn't happen
-    print "\t\t(action' = " + str(i) + ");"
-"""
-
 # Takes a list of 6 status' (player c1-3, opponent c1-3) and returns a list of available actions
 def find_available_actions(status):
     list_of_actions = []                # empty list of available actions, returned at end.
@@ -112,8 +73,9 @@ def find_available_actions(status):
             if status[int(action[3])-1] == 1:
                 list_of_actions += [action_index]
         elif "hero" in action:          # Hero attack
-            if action[-3] == "_":           # Can always attack enemy hero
-                list_of_actions += [action_index]
+            if action[-3] == "_":           # target is enemy hero...
+                if status[3] + status[4] + status[5] == 0:  # No cards on opposing track
+                    list_of_actions += [action_index]
             else:
                 if status[int(action[-1])+2] == 1:
                     list_of_actions += [action_index]
@@ -132,8 +94,6 @@ def find_available_actions(status):
                         list_of_actions += [action_index]
                 elif status[int(action[-1])+2] == 1:
                     list_of_actions += [action_index]
-
-
     return list_of_actions
 
 
