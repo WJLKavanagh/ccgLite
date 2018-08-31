@@ -75,7 +75,7 @@ def find_available_actions(status):
         elif "hero" in action:          # Hero attack
             if action[-3] == "_":           # target is enemy hero...
                 if status[3] + status[4] + status[5] == 0:  # No cards on opposing track
-                    list_of_actions += [action_index]git
+                    list_of_actions += [action_index]
             else:
                 if status[int(action[-1])+2] == 1:
                     list_of_actions += [action_index]
