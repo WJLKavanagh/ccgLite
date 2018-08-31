@@ -75,7 +75,7 @@ def find_available_actions(status):
         elif "hero" in action:          # Hero attack
             if action[-3] == "_":           # target is enemy hero...
                 if status[3] + status[4] + status[5] == 0:  # No cards on opposing track
-                    list_of_actions += [action_index]
+                    list_of_actions += [action_index]git
             else:
                 if status[int(action[-1])+2] == 1:
                     list_of_actions += [action_index]
@@ -145,5 +145,3 @@ def run(deck1, deck2, team):
                         for opc3 in [0,1]:
                             generate_guard_comm([c1,c2,c3,opc1,opc2,opc3])
     print
-
-run(1,3,1)
