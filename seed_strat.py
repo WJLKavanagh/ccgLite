@@ -112,7 +112,7 @@ def generate_guard_comm(status):
     print "\n\t\t\t",
     for j in range(3,6):
         print "p" + str(3-t) + "c" + str(j-2),
-        if status[i] == 1:
+        if status[j] == 1:
             print "> 0",
         else:
             print "< 1",
