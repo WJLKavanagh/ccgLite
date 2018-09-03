@@ -97,7 +97,7 @@ def print_guard(values):
 def print_command(state_id):
     dec_state = transitions[state_id][0]
     comm_str = transitions[dec_state][1]
-    print "\t\t\t1\t: (action' = " + find_action_id(comm_str) + ")"
+    print "\t\t\t1\t: (action' = " + find_action_id(comm_str) + ");"
 
 def run(deck1, deck2, file, team):
     global t, transitions, states
