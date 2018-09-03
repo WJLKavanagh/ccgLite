@@ -1,4 +1,4 @@
-import sys
+import sys, os
 import prefix, suffix, free_strat, seed_strat
 
 """
@@ -11,9 +11,11 @@ import prefix, suffix, free_strat, seed_strat
 
 """
 
-sys.stdout = open("test_model.prism","w")
-prefix.run(1,3,"mdp",1)
-free_strat.run(1,3,1)
-seed_strat.run(1,3,2)
-suffix.run(1,3,1)
+sys.stdout = open("test_model_2.prism","w")
+prefix.run(1,3,"mdp",0)
+sys.stdout = sys.__stdout__
+os.system("cat test_adversary.txt >> test_model_2.prism")
+sys.stdout = open("test_model_2.prism","w")
+free_strat.run(1,3,2)
+suffix.run(1,3,0)
 sys.stdout = sys.__stdout__
