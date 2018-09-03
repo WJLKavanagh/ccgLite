@@ -107,13 +107,9 @@ def run(deck1, deck2, file, team):
     transitions = populate_transitions(file)
     states = populate_states(file)
     print "// Educated Strategy for player " + str(t)
-    print_guard(states["31260646"])
-    print_command("31260646")
-    """
     for state in states:                # For every relevant state
         print_guard(states[state])          # Print the guard for said state
         print_command(state)
-    """
     print
 
 # UPDATE POP_TRANS() TO INCLUDE ALL POSSIBLE Pt ACTIONS FOUND AFTER A PLAYER_t_TURN
