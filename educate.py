@@ -82,7 +82,7 @@ def populate_states(file):
 
 # Takes in a list describing local state and prints corresponding guard
 def print_guard(values):
-    print "\t[player_" + str(t) + "_turn]\action = 0 & turn_clock = " + str(t) + " &",
+    print "\t[player_" + str(t) + "_turn]\taction = 0 & turn_clock = " + str(t) + " &",
     variables = ["p1", "p2", "p1c1", "p1c2", "p1c3", "p2c1", "p2c2", "p2c3"]
     for i in range(len(variables)):
         print variables[i] + " = " + values[i],
