@@ -108,7 +108,7 @@ def run(deck1, deck2, file, team):
     print_command("31260646")
     """
     for state in states:                # For every relevant state
-        print_guard(states[state])          # Print the guard for said state"""
+        print_guard(states[state])          # Print the guard for said state
         print_command(state)
     """
     print
