@@ -15,7 +15,7 @@ sys.stdout = open("test_model_2.prism","w")
 prefix.run(1,3,"mdp",0)
 sys.stdout = sys.__stdout__
 os.system("cat test_adversary.txt >> test_model_2.prism")
-sys.stdout = open("test_model_2.prism","w")
+sys.stdout = open("test_model_2.prism","a")
 free_strat.run(1,3,2)
 suffix.run(1,3,0)
 sys.stdout = sys.__stdout__
