@@ -65,7 +65,7 @@ def populate_transitions(file):
         detail = line.split()
         if "player_" + str(t) + "_turn" == detail[4]:
             transitions[detail[0]] = [detail[2],detail[4]]
-        elif detail[4][:1] == "p"+str(t):
+        elif detail[4][:2] == "p"+str(t):
             transitions[detail[0]] = [detail[2],detail[4]]
 
     return transitions
