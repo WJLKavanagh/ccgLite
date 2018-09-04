@@ -125,7 +125,7 @@ def create_action_list(deck1, deck2):
 def display_smg_player_descriptions():
     print "\nplayer p1\n\t[player_1_turn]\nendplayer\n"
     print "player p2\n\t[player_2_turn]\nendplayer\n"
-    print "player system"
+    print "player sys"
     printed = 0
     action_list[0] = "flip_coin"
     for i in range(len(action_list)):
@@ -136,6 +136,9 @@ def display_smg_player_descriptions():
         print "[" + action_list[i] + "],",
         if (printed+1)%5 == 0:
             print "\n",
+        if i == len(action_list) - 1:
+            print "[" + action_list[i] + "]",
+
         printed += 1
     print "\nendplayer"
 
