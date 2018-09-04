@@ -133,14 +133,14 @@ def display_smg_player_descriptions():
             continue
         if printed%5 == 0:
             print "\t",
-        print "[" + action_list[i] + "],",
+        if i < len(action_list) - 1:
+            print "[" + action_list[i] + "],",
         if (printed+1)%5 == 0:
             print "\n",
         if i == len(action_list) - 1:
-            print "[" + action_list[i] + "]",
-
+            print "[" + action_list[i] + "]"
         printed += 1
-    print "\nendplayer"
+    print "endplayer"
 
 
 # Main run method. Takes 2 ints for deck numbers of P1 and P2 then model name ("mdp"/"smg" etc)
