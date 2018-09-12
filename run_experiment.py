@@ -35,10 +35,10 @@ def optimality(deck1, deck2):
     suffix.run(deck1, deck2, 0)
     sys.stdout=sys.__stdout__
     # run prism-games with lots of memory, hardcoded prism-games location on SAND
-    os.system("../../../../../../usr/local/prism-games-2.0.beta3-linux64/bin/prism -nopre -cuddmaxmem 100g -javamaxmem 100g smg.prism smg_props.props -prop 1 -s > log.txt")
+    os.system("../../../../../../usr/local/prism-games-2.0.beta3-linux64/bin/prism -nopre -cuddmaxmem 300g -javamaxmem 300g smg.prism smg_props.props -prop 1 -s > log.txt")
     p1_opt = find_prev_result()
     if deck1 != deck2:                  # Don't calculate the same optimality twice, there's no need.
-        os.system("../../../../../../usr/local/prism-games-2.0.beta3-linux64/bin/prism -nopre -cuddmaxmem 100g -javamaxmem 100g smg.prism smg_props.props -prop 2 -s > log.txt")
+        os.system("../../../../../../usr/local/prism-games-2.0.beta3-linux64/bin/prism -nopre -cuddmaxmem 300g -javamaxmem 300g smg.prism smg_props.props -prop 2 -s > log.txt")
         p2_opt = find_prev_result()
         return p1_opt, p2_opt
     return p1_opt
@@ -60,7 +60,10 @@ def generate_opt_grid():
     print "2\t|"+str(d2vd1)+"\t|"+str(d2vd2)+"\t|"+str(d2vd3)
     print "3\t|"+str(d3vd1)+"\t|"+str(d3vd2)+"\t|"+str(d3vd3)
 
-generate_opt_grid()
+#generate_opt_grid()
+print optimality(1,2)
+
+
 
 """
 sys.stdout = open("test_model_2.prism","w")
