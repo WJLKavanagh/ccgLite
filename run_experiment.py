@@ -23,6 +23,8 @@ def find_prev_result():
         if "Model checking: " in info[l-i] and prop == "":
             prop = info[l-i].split("Model checking: ")[1][:-1]
             break;
+    if " " in res:
+        return float(res.split(" ")[0])
     return float(res)
 
 # Takes 4 characters and returns opt(win) for either team as two floats
@@ -60,8 +62,8 @@ def generate_opt_grid():
     print "2\t|"+str(d2vd1)+"\t|"+str(d2vd2)+"\t|"+str(d2vd3)
     print "3\t|"+str(d3vd1)+"\t|"+str(d3vd2)+"\t|"+str(d3vd3)
 
-#generate_opt_grid()
-print optimality(1,2)
+generate_opt_grid()
+
 
 
 
