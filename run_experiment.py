@@ -62,9 +62,29 @@ def generate_opt_grid():
     print "2\t|"+str(d2vd1)+"\t|"+str(d2vd2)+"\t|"+str(d2vd3)
     print "3\t|"+str(d3vd1)+"\t|"+str(d3vd2)+"\t|"+str(d3vd3)
 
-generate_opt_grid()
+#generate_opt_grid()
 
+global deck_numbers
+deck_numbers = [1,2,3]
+best_score = 0.0
+best_deck = none
+chosen_seed_deck = 1
+print "Seed deck chosen as deck", chosen_seed_deck, " -- generating seed strategy."
+for opposing_team in range(3):
+    sys.stdout = open("seed"+str(opposing_team)+".prism","w")
+    prefix.run(chosen_seed_deck, opposing_team, "mdp", False)
+    seed_strat.run(chosen_seed_deck, opposing_team, 1)
+    free_strat.run(chosen_seed_deck, opposing_team, 2)
+    suffix.run(chosen_seed_deck, opposing_team, False)
+    sys.stdout = sys.__stdout__
+    os.system("prism -s -javamaxmem 100g seed"+str(i)+".prism props.props -prop 2 > log.txt")
+    result = find_prev_result()
+    print "ProbAdv_2("+str(chosen_seed_deck) + ", " + str(opposing_team) + ") = ", str(result)
+    if result > best_score:
+        best_score = result
+        best_deck = opposing_team
 
+print "best deck found to be:", best_deck
 
 
 """
