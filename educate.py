@@ -114,4 +114,4 @@ def run(deck1, deck2, file, team):
 
 # UPDATE POP_TRANS() TO INCLUDE ALL POSSIBLE Pt ACTIONS FOUND AFTER A PLAYER_t_TURN
 
-run(1,3,"tmp",1)
+#run(1,3,"tmp",1)
