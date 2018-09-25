@@ -84,7 +84,20 @@ for opposing_team in range(1,4):
         best_score = result
         best_deck = opposing_team
 
-print "best deck found to be:", best_deck
+print "best deck found to be:", best_deck, " generating first adversarial strategy.."
+sys.stdout = open("best_seed.prism", "w")
+prefix.run(chosen_seed_deck, opposing_team, "mdp", True)
+seed_strat.run(chosen_seed_deck, opposing_team, 1)
+free_strat.run(chosen_seed_deck, opposing_team, 2)
+suffix.run(chosen_seed_deck, opposing_team, True)
+sys.stdout = sys.__stdout__
+os.system("prism -s -nopre -javamaxmem 100g best_seed.prism props.props -prop 2 > log.txt")
+print "strategy generated, codifying.."
+sys.stdout = open("adv_stat_0.txt","w")
+educate.run(chosen_seed_deck, best_deck, "tmp", 2)
+sys.stdout = sys.__stdout__
+print "strategy codified, beginning core loop: ..."
+
 
 
 """
