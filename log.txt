@@ -1,0 +1,58 @@
+PRISM
+=====
+
+Version: 4.4
+Date: Mon Oct 01 15:00:13 BST 2018
+Hostname: william-XPS-15-9570
+Memory limits: cudd=1g, java(heap)=10g
+Command line: prism -javamaxmem 10g -s it1vs3.prism props.props -prop 1
+
+Parsing model file "it1vs3.prism"...
+
+Parsing properties file "props.props"...
+
+3 properties:
+(1) Pmax=? [ F "p1_win" ]
+(2) Pmax=? [ F "p2_win" ]
+(3) Pmax=? [ F "deadlock"&!"p1_win"&!"p2_win" ]
+
+Type:        MDP
+Modules:     game 
+Variables:   p1 p2 p1c1 p1c2 p1c3 p2c1 p2c2 p2c3 turn_clock action 
+
+---------------------------------------------------------------------
+
+Model checking: Pmax=? [ F "p1_win" ]
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 99 iterations in 10.98 seconds (average 0.110889, setup 0.00)
+
+Time for model construction: 53.335 seconds.
+
+Warning: Deadlocks detected and fixed in 39738 states
+
+Type:        MDP
+States:      847558 (1 initial)
+Transitions: 1931900
+Choices:     1201390
+
+Transition matrix: 431890 nodes (19 terminal), 1931900 minterms, vars: 32r/32c/40nd
+
+Prob0A: 52 iterations in 8.69 seconds (average 0.167096, setup 0.00)
+
+Prob1E: 1148 iterations in 140.19 seconds (average 0.122120, setup 0.00)
+
+yes = 118896, no = 49239, maybe = 679423
+
+Computing remaining probabilities...
+Engine: Sparse
+
+Building sparse matrix... [n=847558, nc=958068, nnz=1651927, k=12] [20.6 MB]
+Creating vector for yes... [6.5 MB]
+Allocating iteration vectors... [2 x 6.5 MB]
+TOTAL: [40.0 MB]
+
+Starting iterations...

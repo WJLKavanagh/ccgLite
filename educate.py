@@ -63,10 +63,11 @@ def populate_transitions(file):
     transitions = {}
     for line in open(file+".tra","r").readlines()[1:]:           # First line desribes columns - ignore.
         detail = line.split()
-        if "player_" + str(t) + "_turn" == detail[4]:
-            transitions[detail[0]] = [detail[2],detail[4]]
-        elif detail[4][:2] == "p"+str(t):
-            transitions[detail[0]] = [detail[2],detail[4]]
+        if len(detail) > 4:                                         # Otherwise no action was available, so skip..
+            if "player_" + str(t) + "_turn" == detail[4]:
+                transitions[detail[0]] = [detail[2],detail[4]]
+            elif detail[4][:2] == "p"+str(t):
+                transitions[detail[0]] = [detail[2],detail[4]]
 
     return transitions
 
@@ -97,7 +98,10 @@ def print_guard(values):
 def print_command(state_id):
     dec_state = transitions[state_id][0]
     comm_str = transitions[dec_state][1]
-    print "\t\t\t1\t: (action' = " + find_action_id(comm_str) + ");"
+    print "\t\t\t\t(action' = " + find_action_id(comm_str) + ");"
+
+def is_valid(state):
+    return True
 
 def run(deck1, deck2, file, team):
     global t, transitions, states
@@ -108,10 +112,11 @@ def run(deck1, deck2, file, team):
     states = populate_states(file)
     print "// Educated Strategy for player " + str(t)
     for state in states:                # For every relevant state
-        print_guard(states[state])          # Print the guard for said state
-        print_command(state)
+        if is_valid(state):
+            print_guard(states[state])          # Print the guard for said state
+            print_command(state)
     print
 
 # UPDATE POP_TRANS() TO INCLUDE ALL POSSIBLE Pt ACTIONS FOUND AFTER A PLAYER_t_TURN
 
-#run(1,3,"tmp",1)
+#run(1,1,"tmp",1)
