@@ -280,7 +280,7 @@ def run(deck1, deck2, multiple_initial_states):
         print "// Multiple initial states"
         print "init"
         print "\taction = 0 & (turn_clock = 1 | turn_clock = 2) &"
-        print "\tp1 > 0 & p1 <= p1_hea & p2 > 0 & p2 <= p2_hea &"
+        print "\tp1 > 0 & p1 < (p1_hea + 1) & p2 > 0 & p2 < (p2_hea + 1) &"
         for i in range(1,4):
             print "\t(p1c" + str(i) + " > -2 & p1c" + str(i) + " < " + str(max_health+1) + ") &",
             print "(p2c" + str(i) + " > -2 & p2c" + str(i) + " < " + str(max_health+1) + ")",
