@@ -63,9 +63,9 @@ def generate_opt_grid():
     print "3\t|"+str(d3vd1)+"\t|"+str(d3vd2)+"\t|"+str(d3vd3)
 
 def adversary_is_unique(it):
-    f1 = "adv_strat_" + str(it+1) + ".txt"
     if it > 3:
-        for comp in range(it-2, -1, -1):
+        f1 = "adv_strat_" + str(it) + ".txt"
+        for comp in range(it-1, 0, -1):
             f2 = "adv_strat_" + str(comp) + ".txt"
             if filecmp.cmp(f1, f2, shallow=False):
                 print "adversary " + str(it-1) + " is equivalent to " + str(comp)
@@ -108,7 +108,7 @@ def flip_and_run(it, opponent):
         if pair_result > best_score:
             best_score = pair_result
             best_deck = i
-    print "deck " + str(best_deck), "found as adversarial team, calculating adversarial strategy...",
+    print "deck " + str(best_deck), "found as adversarial team, calculating adversarial strategy..."
     # Write old_adv VS best_opp to file with multiple i in I for adversary calculation
     sys.stdout = open("it"+str(it)+"_adv.prism", "w")
     if it % 2 == 1:
@@ -126,7 +126,7 @@ def flip_and_run(it, opponent):
         free_strat.run(opponent, best_deck, 2)
         suffix.run(opponent, best_deck, True)
     sys.stdout=sys.__stdout__
-    os.system("prism -s -javamaxmem 100g it"+str(it)+"_adv.prism props.props -prop "+str(2-it%2)+" -s -exportadvmdp tmp.tra -exportstates tmp.sta > log.txt")
+    os.system("prism -javamaxmem -nopre 100g it"+str(it)+"_adv.prism props.props -prop "+str(2-it%2)+" -s -exportadvmdp tmp.tra -exportstates tmp.sta > log.txt")
     print "Strategy calculated, generating PRISM code.."
     sys.stdout = open("adv_strat_"+str(it)+".txt", "w")
     # Write adversary to file ( adv_strat_[it] )
@@ -135,7 +135,7 @@ def flip_and_run(it, opponent):
     else:
         educate.run(opponent, best_deck, "tmp", 2-(it%2))
     sys.stdout=sys.__stdout__
-    return best_pair, best_score
+    return best_deck, best_score
 
 
 #generate_opt_grid()
