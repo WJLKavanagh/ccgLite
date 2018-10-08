@@ -26,8 +26,8 @@ acc=0.7
 !GUARDIAN
 hea=3
 dmg=1
-acc=0.8
+acc=0.75
 !ARCHER
 hea=2
 dmg=1
-acc=0.8
+acc=0.75

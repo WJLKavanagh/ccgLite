@@ -64,8 +64,8 @@ def generate_opt_grid():
 
 def adversary_is_unique(it):
     if it > 3:
-        f1 = "adv_strat_" + str(it) + ".txt"
-        for comp in range(it-1, 0, -1):
+        f1 = "adv_strat_" + str(it-1) + ".txt"
+        for comp in range(it-2, 0, -2):
             f2 = "adv_strat_" + str(comp) + ".txt"
             if filecmp.cmp(f1, f2, shallow=False):
                 print "adversary " + str(it-1) + " is equivalent to " + str(comp)
@@ -99,7 +99,7 @@ def flip_and_run(it, opponent):
             suffix.run(opponent, i, False)                      # False as |I| = 1
         # Model built, now find the greatest adversarial value
         sys.stdout=sys.__stdout__
-        os.system("prism -javamaxmem 100g -s it"+str(it)+"vs"+str(i)+".prism props.props -prop "+str(2-it%2)+" > log.txt")
+        os.system("prism -javamaxmem 10g -s it"+str(it)+"vs"+str(i)+".prism props.props -prop "+str(2-it%2)+" > log.txt")
         pair_result = find_prev_result()
         if it % 2 == 1:
             print "ProbAdv_"+str(2-(it%2))+"(" + str(i) + ",", str(opponent) + ") = " + str(pair_result)
@@ -126,7 +126,7 @@ def flip_and_run(it, opponent):
         free_strat.run(opponent, best_deck, 2)
         suffix.run(opponent, best_deck, True)
     sys.stdout=sys.__stdout__
-    os.system("prism -javamaxmem -nopre 100g it"+str(it)+"_adv.prism props.props -prop "+str(2-it%2)+" -s -exportadvmdp tmp.tra -exportstates tmp.sta > log.txt")
+    os.system("prism -javamaxmem 10g -nopre it"+str(it)+"_adv.prism props.props -prop "+str(2-it%2)+" -s -exportadvmdp tmp.tra -exportstates tmp.sta > log.txt")
     print "Strategy calculated, generating PRISM code.."
     sys.stdout = open("adv_strat_"+str(it)+".txt", "w")
     # Write adversary to file ( adv_strat_[it] )
@@ -153,7 +153,7 @@ for opposing_team in range(1,4):
     free_strat.run(chosen_seed_deck, opposing_team, 2)
     suffix.run(chosen_seed_deck, opposing_team, False)
     sys.stdout = sys.__stdout__
-    os.system("prism -s -nopre -javamaxmem 100g seed"+str(opposing_team)+".prism props.props -prop 2 > log.txt")
+    os.system("prism -s -nopre -javamaxmem 10g seed"+str(opposing_team)+".prism props.props -prop 2 > log.txt")
     result = find_prev_result()
     print "ProbAdv_2("+str(chosen_seed_deck) + ", " + str(opposing_team) + ") = ", str(result)
     if result > best_score:
@@ -169,7 +169,7 @@ seed_strat.run(chosen_seed_deck, best_deck, 1)
 free_strat.run(chosen_seed_deck, best_deck, 2)
 suffix.run(chosen_seed_deck, best_deck, True)
 sys.stdout = sys.__stdout__
-os.system("prism -s -nopre -javamaxmem 100g best_seed.prism props.props -prop 2 -exportstates tmp.sta -exportadvmdp tmp.tra > log.txt")
+os.system("prism -s -nopre -javamaxmem 10g best_seed.prism props.props -prop 2 -exportstates tmp.sta -exportadvmdp tmp.tra > log.txt")
 print "strategy generated, codifying.."
 sys.stdout = open("adv_strat_0.txt","w")
 educate.run(chosen_seed_deck, best_deck, "tmp", 2)

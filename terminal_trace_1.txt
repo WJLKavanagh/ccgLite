@@ -1,0 +1,517 @@
+13:35:49 - william @ ~/Documents/phd/ccgLite: python run_experiment.py
+Seed deck chosen as deck 1 -- generating seed strategy.
+ProbAdv_2(1, 1) =  0.9944436283
+ProbAdv_2(1, 2) =  0.9994247839
+ProbAdv_2(1, 3) =  0.9995366315
+best deck found to be: 3  generating first adversarial strategy..
+deck: 1 vs deck: 3
+strategy generated, codifying..
+strategy codified, beginning core loop: ...
+too early for duplicates, continuing..
+Iteration: 1, opponent is using deck 3, -- calculating adversaries..
+ProbAdv_1(1, 3) = 0.9720781543
+ProbAdv_1(2, 3) = 0.9957868279
+ProbAdv_1(3, 3) = 0.9997036664
+deck 3 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+too early for duplicates, continuing..
+Iteration: 2, opponent is using deck 3, -- calculating adversaries..
+ProbAdv_2(3, 1) = 0.8983833722
+ProbAdv_2(3, 2) = 0.9926802748
+ProbAdv_2(3, 3) = 0.983468041
+deck 2 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+too early for duplicates, continuing..
+Iteration: 3, opponent is using deck 2, -- calculating adversaries..
+ProbAdv_1(1, 2) = 0.967316011
+ProbAdv_1(2, 2) = 0.9976624576
+ProbAdv_1(3, 2) = 0.9980171428
+deck 3 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 4, opponent is using deck 3, -- calculating adversaries..
+ProbAdv_2(3, 1) = 0.9391246561
+ProbAdv_2(3, 2) = 0.9914262031
+ProbAdv_2(3, 3) = 0.9999468252
+deck 3 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 5, opponent is using deck 3, -- calculating adversaries..
+ProbAdv_1(1, 3) = 0.9201260094
+ProbAdv_1(2, 3) = 0.9853034573
+ProbAdv_1(3, 3) = 0.999472141
+deck 3 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 6, opponent is using deck 3, -- calculating adversaries..
+ProbAdv_2(3, 1) = 0.9517502133
+ProbAdv_2(3, 2) = 0.9922217282
+ProbAdv_2(3, 3) = 0.9967661168
+deck 3 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 7, opponent is using deck 3, -- calculating adversaries..
+ProbAdv_1(1, 3) = 0.9534968811
+ProbAdv_1(2, 3) = 0.992412449
+ProbAdv_1(3, 3) = 0.9819008623
+deck 2 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 8, opponent is using deck 2, -- calculating adversaries..
+ProbAdv_2(2, 1) = 0.9749840334
+ProbAdv_2(2, 2) = 0.9978742893
+ProbAdv_2(2, 3) = 0.9988766293
+deck 3 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 9, opponent is using deck 3, -- calculating adversaries..
+ProbAdv_1(1, 3) = 0.9366629376
+ProbAdv_1(2, 3) = 0.9757473684
+ProbAdv_1(3, 3) = 0.9999833526
+deck 3 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 10, opponent is using deck 3, -- calculating adversaries..
+ProbAdv_2(3, 1) = 0.8985184109
+ProbAdv_2(3, 2) = 0.9829634641
+ProbAdv_2(3, 3) = 0.9934490739
+deck 3 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 11, opponent is using deck 3, -- calculating adversaries..
+ProbAdv_1(1, 3) = 0.9462314821
+ProbAdv_1(2, 3) = 0.9939471879
+ProbAdv_1(3, 3) = 0.9935931233
+deck 2 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 12, opponent is using deck 2, -- calculating adversaries..
+ProbAdv_2(2, 1) = 0.9314919173
+ProbAdv_2(2, 2) = 0.993016
+ProbAdv_2(2, 3) = 0.9939469063
+deck 3 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 13, opponent is using deck 3, -- calculating adversaries..
+ProbAdv_1(1, 3) = 0.819556469
+ProbAdv_1(2, 3) = 0.9763178858
+ProbAdv_1(3, 3) = 0.9998505257
+deck 3 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 14, opponent is using deck 3, -- calculating adversaries..
+ProbAdv_2(3, 1) = 0.9053455914
+ProbAdv_2(3, 2) = 0.9860843111
+ProbAdv_2(3, 3) = 0.9875750233
+deck 3 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 15, opponent is using deck 3, -- calculating adversaries..
+ProbAdv_1(1, 3) = 0.9264327642
+ProbAdv_1(2, 3) = 0.9813992315
+ProbAdv_1(3, 3) = 0.985553494
+deck 3 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 16, opponent is using deck 3, -- calculating adversaries..
+ProbAdv_2(3, 1) = 0.9500091579
+ProbAdv_2(3, 2) = 0.9893799461
+ProbAdv_2(3, 3) = 0.985113693
+deck 2 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 17, opponent is using deck 2, -- calculating adversaries..
+ProbAdv_1(1, 2) = 0.9764719218
+ProbAdv_1(2, 2) = 0.9977519677
+ProbAdv_1(3, 2) = 0.9990367422
+deck 3 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 18, opponent is using deck 3, -- calculating adversaries..
+ProbAdv_2(3, 1) = 0.9274208698
+ProbAdv_2(3, 2) = 0.9905516445
+ProbAdv_2(3, 3) = 0.9997751766
+deck 3 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 19, opponent is using deck 3, -- calculating adversaries..
+ProbAdv_1(1, 3) = 0.8866607087
+ProbAdv_1(2, 3) = 0.9828744937
+ProbAdv_1(3, 3) = 0.9958927498
+deck 3 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 20, opponent is using deck 3, -- calculating adversaries..
+ProbAdv_2(3, 1) = 0.9376264898
+ProbAdv_2(3, 2) = 0.9922595597
+ProbAdv_2(3, 3) = 0.9965006394
+deck 3 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 21, opponent is using deck 3, -- calculating adversaries..
+ProbAdv_1(1, 3) = 0.9018298628
+ProbAdv_1(2, 3) = 0.9912727772
+ProbAdv_1(3, 3) = 0.9763581242
+deck 2 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 22, opponent is using deck 2, -- calculating adversaries..
+ProbAdv_2(2, 1) = 0.9781654759
+ProbAdv_2(2, 2) = 0.9967061266
+ProbAdv_2(2, 3) = 0.9988773245
+deck 3 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 23, opponent is using deck 3, -- calculating adversaries..
+ProbAdv_1(1, 3) = 0.9352959999
+ProbAdv_1(2, 3) = 0.9784651782
+ProbAdv_1(3, 3) = 0.9997750039
+deck 3 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 24, opponent is using deck 3, -- calculating adversaries..
+ProbAdv_2(3, 1) = 0.8970709184
+ProbAdv_2(3, 2) = 0.9814814814
+ProbAdv_2(3, 3) = 0.9945554223
+deck 3 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 25, opponent is using deck 3, -- calculating adversaries..
+ProbAdv_1(1, 3) = 0.955941851
+ProbAdv_1(2, 3) = 0.9944860253
+ProbAdv_1(3, 3) = 0.9882463839
+deck 2 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 26, opponent is using deck 2, -- calculating adversaries..
+ProbAdv_2(2, 1) = 0.9374269799
+ProbAdv_2(2, 2) = 0.9892866069
+ProbAdv_2(2, 3) = 0.9953152198
+deck 3 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 27, opponent is using deck 3, -- calculating adversaries..
+ProbAdv_1(1, 3) = 0.8133082294
+ProbAdv_1(2, 3) = 0.9448890176
+ProbAdv_1(3, 3) = 0.9978139322
+deck 3 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 28, opponent is using deck 3, -- calculating adversaries..
+ProbAdv_2(3, 1) = 0.9218666069
+ProbAdv_2(3, 2) = 0.9860843111
+ProbAdv_2(3, 3) = 0.988881968
+deck 3 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 29, opponent is using deck 3, -- calculating adversaries..
+ProbAdv_1(1, 3) = 0.9355779999
+ProbAdv_1(2, 3) = 0.9939471879
+ProbAdv_1(3, 3) = 0.9922398616
+deck 2 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 30, opponent is using deck 2, -- calculating adversaries..
+ProbAdv_2(2, 1) = 0.9601719791
+ProbAdv_2(2, 2) = 0.9946510779
+ProbAdv_2(2, 3) = 0.9927447243
+deck 2 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 31, opponent is using deck 2, -- calculating adversaries..
+ProbAdv_1(1, 2) = 0.9234395767
+ProbAdv_1(2, 2) = 0.9855715922
+ProbAdv_1(3, 2) = 0.9999909856
+deck 3 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 32, opponent is using deck 3, -- calculating adversaries..
+ProbAdv_2(3, 1) = 0.9285786115
+ProbAdv_2(3, 2) = 0.9859967695
+ProbAdv_2(3, 3) = 0.999942776
+deck 3 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 33, opponent is using deck 3, -- calculating adversaries..
+ProbAdv_1(1, 3) = 0.9637466675
+ProbAdv_1(2, 3) = 0.9962979105
+ProbAdv_1(3, 3) = 0.9995744092
+deck 3 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 34, opponent is using deck 3, -- calculating adversaries..
+ProbAdv_2(3, 1) = 0.9318912606
+ProbAdv_2(3, 2) = 0.9830757709
+ProbAdv_2(3, 3) = 0.9921394369
+deck 3 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 35, opponent is using deck 3, -- calculating adversaries..
+ProbAdv_1(1, 3) = 0.9558842469
+ProbAdv_1(2, 3) = 0.991168687
+ProbAdv_1(3, 3) = 0.9940841182
+deck 3 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 36, opponent is using deck 3, -- calculating adversaries..
+ProbAdv_2(3, 1) = 0.949199203
+ProbAdv_2(3, 2) = 0.9950140553
+ProbAdv_2(3, 3) = 0.9815954297
+deck 2 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 37, opponent is using deck 2, -- calculating adversaries..
+ProbAdv_1(1, 2) = 0.9483842299
+ProbAdv_1(2, 2) = 0.994770422
+ProbAdv_1(3, 2) = 0.9921495111
+deck 2 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 38, opponent is using deck 2, -- calculating adversaries..
+ProbAdv_2(2, 1) = 0.908137009
+ProbAdv_2(2, 2) = 0.9756827579
+ProbAdv_2(2, 3) = 0.9999545423
+deck 3 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 39, opponent is using deck 3, -- calculating adversaries..
+ProbAdv_1(1, 3) = 0.9091208721
+ProbAdv_1(2, 3) = 0.9781709511
+ProbAdv_1(3, 3) = 0.9998324586
+deck 3 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 40, opponent is using deck 3, -- calculating adversaries..
+ProbAdv_2(3, 1) = 0.931730707
+ProbAdv_2(3, 2) = 0.9883962254
+ProbAdv_2(3, 3) = 0.9956138236
+deck 3 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 41, opponent is using deck 3, -- calculating adversaries..
+ProbAdv_1(1, 3) = 0.9445456128
+ProbAdv_1(2, 3) = 0.9941893004
+ProbAdv_1(3, 3) = 0.9907249674
+deck 2 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 42, opponent is using deck 2, -- calculating adversaries..
+ProbAdv_2(2, 1) = 0.961636809
+ProbAdv_2(2, 2) = 0.9947629475
+ProbAdv_2(2, 3) = 0.9958057288
+deck 3 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 43, opponent is using deck 3, -- calculating adversaries..
+ProbAdv_1(1, 3) = 0.9183299337
+ProbAdv_1(2, 3) = 0.9781817383
+ProbAdv_1(3, 3) = 0.9998502462
+deck 3 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 44, opponent is using deck 3, -- calculating adversaries..
+ProbAdv_2(3, 1) = 0.9166374095
+ProbAdv_2(3, 2) = 0.982601304
+ProbAdv_2(3, 3) = 0.9968104032
+deck 3 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 45, opponent is using deck 3, -- calculating adversaries..
+ProbAdv_1(1, 3) = 0.9080126315
+ProbAdv_1(2, 3) = 0.9939471879
+ProbAdv_1(3, 3) = 0.9876192836
+deck 2 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 46, opponent is using deck 2, -- calculating adversaries..
+ProbAdv_2(2, 1) = 0.9591301029
+ProbAdv_2(2, 2) = 0.9923748771
+ProbAdv_2(2, 3) = 0.9886610884
+deck 2 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 47, opponent is using deck 2, -- calculating adversaries..
+ProbAdv_1(1, 2) = 0.9329644778
+ProbAdv_1(2, 2) = 0.9901370155
+ProbAdv_1(3, 2) = 0.9999938891
+deck 3 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 48, opponent is using deck 3, -- calculating adversaries..
+ProbAdv_2(3, 1) = 0.9111668297
+ProbAdv_2(3, 2) = 0.9771020871
+ProbAdv_2(3, 3) = 0.99992814
+deck 3 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 49, opponent is using deck 3, -- calculating adversaries..
+ProbAdv_1(1, 3) = 0.9599849243
+ProbAdv_1(2, 3) = 0.9962979105
+ProbAdv_1(3, 3) = 0.9985164004
+deck 3 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 50, opponent is using deck 3, -- calculating adversaries..
+ProbAdv_2(3, 1) = 0.9396797821
+ProbAdv_2(3, 2) = 0.9924900709
+ProbAdv_2(3, 3) = 0.9948193149
+deck 3 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 51, opponent is using deck 3, -- calculating adversaries..
+ProbAdv_1(1, 3) = 0.9553700525
+ProbAdv_1(2, 3) = 0.991694881
+ProbAdv_1(3, 3) = 0.9820275114
+deck 2 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+Iteration: 52, opponent is using deck 2, -- calculating adversaries..
+ProbAdv_2(2, 1) = 0.9638171296
+ProbAdv_2(2, 2) = 0.9950794963
+ProbAdv_2(2, 3) = 0.9993687765
+deck 3 found as adversarial team, calculating adversarial strategy...
+Strategy calculated, generating PRISM code..
+adversary is unique, continuing..
+
+SCRAPED:
+
+Iteration: 1, - Opponent: 1
+	[0.9720781543, 0.9957868279, 0.9997036664]
+Iteration: 2, - Opponent: 3
+	[0.8983833722, 0.9926802748, 0.983468041]
+Iteration: 3, - Opponent: 2
+	[0.967316011, 0.9976624576, 0.9980171428]
+Iteration: 4, - Opponent: 3
+	[0.9391246561, 0.9914262031, 0.9999468252]
+Iteration: 5, - Opponent: 3
+	[0.9201260094, 0.9853034573, 0.999472141]
+Iteration: 6, - Opponent: 3
+	[0.9517502133, 0.9922217282, 0.9967661168]
+Iteration: 7, - Opponent: 3
+	[0.9534968811, 0.992412449, 0.9819008623]
+Iteration: 8, - Opponent: 2
+	[0.9749840334, 0.9978742893, 0.9988766293]
+Iteration: 9, - Opponent: 3
+	[0.9366629376, 0.9757473684, 0.9999833526]
+Iteration: 10 - Opponent: 3
+	[0.8985184109, 0.9829634641, 0.9934490739]
+Iteration: 11 - Opponent: 3
+	[0.9462314821, 0.9939471879, 0.9935931233]
+Iteration: 12 - Opponent: 2
+	[0.9314919173, 0.993016, 0.9939469063]
+Iteration: 13 - Opponent: 3
+	[0.819556469, 0.9763178858, 0.9998505257]
+Iteration: 14 - Opponent: 3
+	[0.9053455914, 0.9860843111, 0.9875750233]
+Iteration: 15 - Opponent: 3
+	[0.9264327642, 0.9813992315, 0.985553494]
+Iteration: 16 - Opponent: 3
+	[0.9500091579, 0.9893799461, 0.985113693]
+Iteration: 17 - Opponent: 2
+	[0.9764719218, 0.9977519677, 0.9990367422]
+Iteration: 18 - Opponent: 3
+	[0.9274208698, 0.9905516445, 0.9997751766]
+Iteration: 19 - Opponent: 3
+	[0.8866607087, 0.9828744937, 0.9958927498]
+Iteration: 20 - Opponent: 3
+	[0.9376264898, 0.9922595597, 0.9965006394]
+Iteration: 21 - Opponent: 3
+	[0.9018298628, 0.9912727772, 0.9763581242]
+Iteration: 22 - Opponent: 2
+	[0.9781654759, 0.9967061266, 0.9988773245]
+Iteration: 23 - Opponent: 3
+	[0.9352959999, 0.9784651782, 0.9997750039]
+Iteration: 24 - Opponent: 3
+	[0.8970709184, 0.9814814814, 0.9945554223]
+Iteration: 25 - Opponent: 3
+	[0.955941851, 0.9944860253, 0.9882463839]
+Iteration: 26 - Opponent: 2
+	[0.9374269799, 0.9892866069, 0.9953152198]
+Iteration: 27 - Opponent: 3
+	[0.8133082294, 0.9448890176, 0.9978139322]
+Iteration: 28 - Opponent: 3
+	[0.9218666069, 0.9860843111, 0.988881968]
+Iteration: 29 - Opponent: 3
+	[0.9355779999, 0.9939471879, 0.9922398616]
+Iteration: 30 - Opponent: 2
+	[0.9601719791, 0.9946510779, 0.9927447243]
+Iteration: 31 - Opponent: 2
+	[0.9234395767, 0.9855715922, 0.9999909856]
+Iteration: 32 - Opponent: 3
+	[0.9285786115, 0.9859967695, 0.999942776]
+Iteration: 33 - Opponent: 3
+	[0.9637466675, 0.9962979105, 0.9995744092]
+Iteration: 34 - Opponent: 3
+	[0.9318912606, 0.9830757709, 0.9921394369]
+Iteration: 35 - Opponent: 3
+	[0.9558842469, 0.991168687, 0.9940841182]
+Iteration: 36 - Opponent: 3
+	[0.949199203, 0.9950140553, 0.9815954297]
+Iteration: 37 - Opponent: 2
+	[0.9483842299, 0.994770422, 0.9921495111]
+Iteration: 38 - Opponent: 2
+	[0.908137009, 0.9756827579, 0.9999545423]
+Iteration: 39 - Opponent: 3
+	[0.9091208721, 0.9781709511, 0.9998324586]
+Iteration: 40 - Opponent: 3
+	[0.931730707, 0.9883962254, 0.9956138236]
+Iteration: 41 - Opponent: 3
+	[0.9445456128, 0.9941893004, 0.9907249674]
+Iteration: 42 - Opponent: 2
+	[0.961636809, 0.9947629475, 0.9958057288]
+Iteration: 43 - Opponent: 3
+	[0.9183299337, 0.9781817383, 0.9998502462]
+Iteration: 44 - Opponent: 3
+	[0.9166374095, 0.982601304, 0.9968104032]
+Iteration: 45 - Opponent: 3
+	[0.9080126315, 0.9939471879, 0.9876192836]
+Iteration: 46 - Opponent: 2
+	[0.9591301029, 0.9923748771, 0.9886610884]
+Iteration: 47 - Opponent: 2
+	[0.9329644778, 0.9901370155, 0.9999938891]
+Iteration: 48 - Opponent: 3
+	[0.9111668297, 0.9771020871, 0.99992814]
+Iteration: 49 - Opponent: 3
+	[0.9599849243, 0.9962979105, 0.9985164004]
+Iteration: 50 - Opponent: 3
+	[0.9396797821, 0.9924900709, 0.9948193149]
+Iteration: 51 - Opponent: 3
+	[0.9553700525, 0.991694881, 0.9820275114]
+Iteration: 52 - Opponent: 2
+	[0.9638171296, 0.9950794963, 0.9993687765]
+
+CONFIG:
+
+Deck_1=[KRP]
+!Deck_1_hea=4
+!Deck_1_dmg=1
+Deck_2=[KRG]
+!Deck_2_hea=4
+!Deck_2_dmg=1
+Deck_3=[KGA]
+!Deck_3_hea=4
+!Deck_3_dmg=1
+# Deck 9 used for testing
+Deck_9=[KKK]
+!Deck_9_hea=4
+!Deck_9_dmg=1
+!KNIGHT
+hea=2
+dmg=2
+acc=0.75
+!ROGUE
+hea=2
+dmg=1
+acc=0.9
+!PRIEST
+hea=2
+dmg=1
+acc=0.7
+!GUARDIAN
+hea=3
+dmg=1
+acc=0.8
+!ARCHER
+hea=2
+dmg=1
+acc=0.8
